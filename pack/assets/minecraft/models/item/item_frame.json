@@ -1,0 +1,31 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/item_frame"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":701}, "model": "item/loose_trash_mobs"},
+		{"predicate": {"custom_model_data":702}, "model": "item/loose_medium_mobs"},
+		{"predicate": {"custom_model_data":703}, "model": "item/loose_hard_mobs"},
+		{"predicate": {"custom_model_data":704}, "model": "item/loose_village_raiders"},
+		{"predicate": {"custom_model_data":705}, "model": "item/loose_zombie"},
+		{"predicate": {"custom_model_data":706}, "model": "item/loose_skeleton"},
+		{"predicate": {"custom_model_data":707}, "model": "item/loose_creeper"},
+		{"predicate": {"custom_model_data":708}, "model": "item/loose_spider"},
+		{"predicate": {"custom_model_data":709}, "model": "item/loose_slime"},
+		{"predicate": {"custom_model_data":710}, "model": "item/loose_food_low"},
+		{"predicate": {"custom_model_data":711}, "model": "item/loose_food_high"},
+		{"predicate": {"custom_model_data":712}, "model": "item/loose_weapon_low"},
+		{"predicate": {"custom_model_data":713}, "model": "item/loose_weapon_high"},
+		{"predicate": {"custom_model_data":714}, "model": "item/loose_armor_low"},
+		{"predicate": {"custom_model_data":715}, "model": "item/loose_armor_high"},
+		{"predicate": {"custom_model_data":716}, "model": "item/loose_money_low"},
+		{"predicate": {"custom_model_data":717}, "model": "item/loose_money_high"},
+		{"predicate": {"custom_model_data":718}, "model": "item/loose_medical_low"},
+		{"predicate": {"custom_model_data":719}, "model": "item/loose_medical_high"},
+		{"predicate": {"custom_model_data":720}, "model": "item/loose_barter_low"},
+		{"predicate": {"custom_model_data":721}, "model": "item/loose_barter_high"},
+		{"predicate": {"custom_model_data":723}, "model": "item/loose_valuable_low"},
+		{"predicate": {"custom_model_data":724}, "model": "item/loose_valuable_high"}
+	]
+}

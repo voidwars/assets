@@ -1,0 +1,12 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/golden_apple"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":401}, "model": "item/bandage"},
+		{"predicate": {"custom_model_data":402}, "model": "item/magic_bandage"},
+		{"predicate": {"custom_model_data":411}, "model": "item/medkit_t1"},
+		{"predicate": {"custom_model_data":421}, "model": "item/wooden_splint"}
+	]
+}

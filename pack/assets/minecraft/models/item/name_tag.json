@@ -1,0 +1,18 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/name_tag"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":501}, "model": "item/mobpool_trash_mobs"},
+		{"predicate": {"custom_model_data":502}, "model": "item/mobpool_medium_mobs"},
+		{"predicate": {"custom_model_data":503}, "model": "item/mobpool_hard_mobs"},
+		{"predicate": {"custom_model_data":504}, "model": "item/mobpool_village_raiders"},
+		{"predicate": {"custom_model_data":505}, "model": "item/mobpool_zombie"},
+		{"predicate": {"custom_model_data":506}, "model": "item/mobpool_skeleton"},
+		{"predicate": {"custom_model_data":507}, "model": "item/mobpool_creeper"},
+		{"predicate": {"custom_model_data":508}, "model": "item/mobpool_spider"},
+		{"predicate": {"custom_model_data":509}, "model": "item/mobpool_slime"},
+		{"predicate": {"custom_model_data":510}, "model": "item/mobpool_forest_boss"}
+	]
+}

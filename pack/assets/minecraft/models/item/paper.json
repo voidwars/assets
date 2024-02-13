@@ -1,0 +1,32 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/paper"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":601}, "model": "item/container_trash_mobs"},
+		{"predicate": {"custom_model_data":602}, "model": "item/container_medium_mobs"},
+		{"predicate": {"custom_model_data":603}, "model": "item/container_hard_mobs"},
+		{"predicate": {"custom_model_data":604}, "model": "item/container_village_raiders"},
+		{"predicate": {"custom_model_data":605}, "model": "item/container_zombie"},
+		{"predicate": {"custom_model_data":606}, "model": "item/container_skeleton"},
+		{"predicate": {"custom_model_data":607}, "model": "item/container_creeper"},
+		{"predicate": {"custom_model_data":608}, "model": "item/container_spider"},
+		{"predicate": {"custom_model_data":609}, "model": "item/container_slime"},
+		{"predicate": {"custom_model_data":610}, "model": "item/container_food_low"},
+		{"predicate": {"custom_model_data":611}, "model": "item/container_food_high"},
+		{"predicate": {"custom_model_data":612}, "model": "item/container_weapon_low"},
+		{"predicate": {"custom_model_data":613}, "model": "item/container_weapon_high"},
+		{"predicate": {"custom_model_data":614}, "model": "item/container_armor_low"},
+		{"predicate": {"custom_model_data":615}, "model": "item/container_armor_high"},
+		{"predicate": {"custom_model_data":616}, "model": "item/container_money_low"},
+		{"predicate": {"custom_model_data":617}, "model": "item/container_money_high"},
+		{"predicate": {"custom_model_data":618}, "model": "item/container_medical_low"},
+		{"predicate": {"custom_model_data":619}, "model": "item/container_medical_high"},
+		{"predicate": {"custom_model_data":620}, "model": "item/container_barter_low"},
+		{"predicate": {"custom_model_data":621}, "model": "item/container_barter_high"},
+		{"predicate": {"custom_model_data":623}, "model": "item/container_valuable_low"},
+		{"predicate": {"custom_model_data":624}, "model": "item/container_valuable_high"},
+		{"predicate": {"custom_model_data":625}, "model": "item/container_forest_boss"}
+	]
+}

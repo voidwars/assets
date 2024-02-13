@@ -1,0 +1,11 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/gold_nugget"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":301}, "model": "item/copper_coin"},
+		{"predicate": {"custom_model_data":302}, "model": "item/iron_coin"},
+		{"predicate": {"custom_model_data":303}, "model": "item/gold_coin"}
+	]
+}
