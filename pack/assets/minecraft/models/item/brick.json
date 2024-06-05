@@ -133,6 +133,7 @@
 		{"predicate": {"custom_model_data":1237}, "model": "item/skill_metabolism"},
 		{"predicate": {"custom_model_data":1238}, "model": "item/skill_total"},
 		{"predicate": {"custom_model_data":1239}, "model": "item/skill_repairing"},
+		{"predicate": {"custom_model_data":1240}, "model": "item/skill_contracting"},
 		{"predicate": {"custom_model_data":1401}, "model": "item/exploded_mine"}
 	]
 }
