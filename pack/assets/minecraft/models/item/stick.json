@@ -4,6 +4,12 @@
 		"layer0": "item/stick"
 	},
 	"overrides": [
+		{"predicate": {"custom_model_data":101}, "model": "item/flint_sword"},
+		{"predicate": {"custom_model_data":102}, "model": "item/copper_sword"},
+		{"predicate": {"custom_model_data":103}, "model": "item/iron_sword"},
+		{"predicate": {"custom_model_data":104}, "model": "item/golden_sword"},
+		{"predicate": {"custom_model_data":105}, "model": "item/diamond_sword"},
+		{"predicate": {"custom_model_data":106}, "model": "item/netherite_sword"},
 		{"predicate": {"custom_model_data":111}, "model": "item/flintfin_dagger"},
 		{"predicate": {"custom_model_data":112}, "model": "item/koi_dagger"},
 		{"predicate": {"custom_model_data":113}, "model": "item/steelhead_dagger"},
