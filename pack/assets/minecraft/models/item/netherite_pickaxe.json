@@ -4,7 +4,20 @@
 		"layer0": "item/netherite_pickaxe"
 	},
 	"overrides": [
+		{"predicate": {"custom_model_data":304}, "model": "item/contract_point"},
 		{"predicate": {"custom_model_data":1301}, "model": "item/mf_helmet"},
-		{"predicate": {"custom_model_data":1402}, "model": "item/searching_icon"}
+		{"predicate": {"custom_model_data":1402}, "model": "item/searching_icon"},
+		{"predicate": {"custom_model_data":1601}, "model": "item/blaze_task"},
+		{"predicate": {"custom_model_data":1602}, "model": "item/forestboss_task"},
+		{"predicate": {"custom_model_data":1603}, "model": "item/magmacube_task"},
+		{"predicate": {"custom_model_data":1604}, "model": "item/pillager_task"},
+		{"predicate": {"custom_model_data":1605}, "model": "item/shuffler_task"},
+		{"predicate": {"custom_model_data":1606}, "model": "item/silverfish_task"},
+		{"predicate": {"custom_model_data":1607}, "model": "item/slime_task"},
+		{"predicate": {"custom_model_data":1608}, "model": "item/spider_task"},
+		{"predicate": {"custom_model_data":1609}, "model": "item/stray_task"},
+		{"predicate": {"custom_model_data":1610}, "model": "item/zombie_task"},
+		{"predicate": {"custom_model_data":1611}, "model": "item/skeleton_task"},
+		{"predicate": {"custom_model_data":1612}, "model": "item/wither_skeleton_task"}
 	]
 }
