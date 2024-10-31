@@ -116,13 +116,11 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [0, -90, 25],
-			"translation": [1.13, 3.2, 1.13],
-			"scale": [0.68, 0.68, 0.68]
+			"translation": [1.13, 3.2, 1.13]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, 90, -25],
-			"translation": [1.13, 3.2, 1.13],
-			"scale": [0.68, 0.68, 0.68]
+			"rotation": [0, -90, 25],
+			"translation": [1.13, 3.2, 1.13]
 		},
 		"ground": {
 			"translation": [0, 4, 0]
@@ -136,20 +134,17 @@
 			"name": "stone_hammer",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"nbt": "{}",
 			"children": [
 				{
 					"name": "head",
 					"origin": [8, 12, 8],
 					"color": 0,
-					"nbt": "{}",
 					"children": [0, 1, 2, 3, 4]
 				},
 				{
 					"name": "handle",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
 					"children": [5, 6]
 				}
 			]

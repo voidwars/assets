@@ -6,6 +6,8 @@
 	"overrides": [
 		{"predicate": {"custom_model_data":301}, "model": "item/copper_coin"},
 		{"predicate": {"custom_model_data":302}, "model": "item/iron_coin"},
-		{"predicate": {"custom_model_data":303}, "model": "item/gold_coin"}
+		{"predicate": {"custom_model_data":303}, "model": "item/gold_coin"},
+		{"predicate": {"custom_model_data":305}, "model": "item/diamond_coin"},
+		{"predicate": {"custom_model_data":306}, "model": "item/netherite_coin"}
 	]
 }
