@@ -1,0 +1,12 @@
+{
+"trim_material.minecraft.coarse": "Coarse Material",
+"trim_material.minecraft.rugged": "Rugged Material",
+"trim_material.minecraft.steeled": "Steeled Material",
+"trim_material.minecraft.mighty": "Mighty Material",
+"trim_material.minecraft.robust": "Robust Material",
+"trim_material.minecraft.reinforced": "Reinforced Material",
+"trim_material.minecraft.flint": "Flint Material",
+"trim_pattern.minecraft.padded": "Padded Trim",
+"trim_pattern.minecraft.chainmail": "Chainmail Trim",
+"trim_pattern.minecraft.platemail": "Platemail Trim"
+}

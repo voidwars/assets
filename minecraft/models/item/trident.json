@@ -1,0 +1,14 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "item/trident"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data":113}, "model": "item/wooden_spear"},
+		{"predicate": {"custom_model_data":114}, "model": "item/stone_spear"},
+		{"predicate": {"custom_model_data":115}, "model": "item/iron_spear"},
+		{"predicate": {"custom_model_data":116}, "model": "item/golden_spear"},
+		{"predicate": {"custom_model_data":117}, "model": "item/diamond_spear"},
+		{"predicate": {"custom_model_data":118}, "model": "item/netherite_spear"}
+	]
+}
