@@ -27,6 +27,10 @@
 		{"predicate": {"custom_model_data":621}, "model": "item/container_barter_high"},
 		{"predicate": {"custom_model_data":623}, "model": "item/container_valuable_low"},
 		{"predicate": {"custom_model_data":624}, "model": "item/container_valuable_high"},
-		{"predicate": {"custom_model_data":625}, "model": "item/container_forest_boss"}
+		{"predicate": {"custom_model_data":625}, "model": "item/container_forest_boss"},
+		{"predicate": {"custom_model_data":1403}, "model": "item/gui_page_back"},
+		{"predicate": {"custom_model_data":1404}, "model": "item/gui_page_forward"},
+		{"predicate": {"custom_model_data":1405}, "model": "item/gui_mailbox"},
+		{"predicate": {"custom_model_data":1406}, "model": "item/gui_trash"}
 	]
 }
