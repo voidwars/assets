@@ -72,6 +72,6 @@ All armor slot host files share the same 1501–1518 mapping — the server pick
 1. Add enum constant + ID in `VoidWarsModelData`.
 2. Add `"threshold"` entry pointing at `item/<model_name>` in the correct host JSON.
 3. Add `models/item/<model_name>.json` and `textures/item/<model_name>.png`.
-4. Verify in-game on a dev server with this pack loaded.
+4. Verify in-game on a dev server (Minecraft 1.21.11) with this pack loaded.
 
 If the CMD exists in the enum but not in the pack (or vice versa), the client shows the wrong or vanilla model.

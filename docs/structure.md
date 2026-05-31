@@ -55,9 +55,9 @@ Mob preview items in GUIs reference these via `modelengine:` model paths on the 
 - **Textures**: same basename as the model they bind to, under `textures/item/<name>.png`.
 - **Models**: `models/item/<name>.json` referenced as `"model": "item/<name>"` in item definitions.
 
-## Item model pipeline (1.21.4)
+## Item model pipeline
 
-Custom icons are **not** vanilla parent overrides anymore. Instead:
+Custom icons use the 1.21+ item definition format (`pack/assets/minecraft/items/`):
 
 1. A **host** vanilla item (`stick`, `paper`, `brick`, …) has an entry in `items/<host>.json`.
 2. That file uses `range_dispatch` on `custom_model_data` to pick a Blockbench model.
