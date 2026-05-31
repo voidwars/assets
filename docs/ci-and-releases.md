@@ -41,11 +41,11 @@ The proxy polls the URL every ~30 seconds and pushes the pack when the SHA-1 has
 
 ## Pack format
 
-| Minecraft | `min_format` / `max_format` |
-|-----------|-------------------------------|
-| **1.21.11** (current) | **75** |
+| Minecraft | `pack_format` | `min_format` / `max_format` |
+|-----------|---------------|-------------------------------|
+| **1.21.11** (current) | **75** | **75** |
 
-When upgrading Minecraft, look up the new format on the [pack format wiki](https://minecraft.wiki/w/Pack_format) and bump both fields in `pack/pack.mcmeta` together. Commit as `build(pack): bump pack format to … for 1.21.x`.
+Set all three fields when bumping versions. PackSquash requires `pack_format`; Minecraft 1.21.9+ clients use `min_format` / `max_format`.
 
 ## Troubleshooting
 
