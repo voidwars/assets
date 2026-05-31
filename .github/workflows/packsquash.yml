@@ -1,13 +1,22 @@
-name: Optimize resource pack
-on: [push]
+name: Build resource pack
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+
 jobs:
-  packsquash:
-    name: Optimize resource pack
+  staging:
+    name: Build and publish staging
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v3
+      - name: Clone PR branch
+        uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Run PackSquash
@@ -16,16 +25,45 @@ jobs:
           packsquash_version: latest
           options: |
             pack_directory = 'pack'
-            output_file_path = '/tmp/pack.zip'
+            output_file_path = '${{ runner.temp }}/pack.zip'
             zip_spec_conformance_level = 'disregard'
 
-      - name: Publish Pre-release
-        uses: marvinpinto/action-automatic-releases@latest
-        if: "github.ref == 'refs/heads/main'"
+      - name: Publish staging release
+        uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: "latest"
+          automatic_release_tag: staging
           prerelease: true
-          title: "Latest Build"
+          title: "Staging — PR #${{ github.event.pull_request.number }}"
           files: |
-            /tmp/pack.zip
+            ${{ runner.temp }}/pack.zip
+
+  production:
+    name: Build and publish production
+    if: github.event.action == 'closed' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone merge commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          fetch-depth: 0
+
+      - name: Run PackSquash
+        uses: ComunidadAylas/PackSquash-action@v4
+        with:
+          packsquash_version: latest
+          options: |
+            pack_directory = 'pack'
+            output_file_path = '${{ runner.temp }}/pack.zip'
+            zip_spec_conformance_level = 'disregard'
+
+      - name: Publish production release
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: "Production — PR #${{ github.event.pull_request.number }}"
+          files: |
+            ${{ runner.temp }}/pack.zip
