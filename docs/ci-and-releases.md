@@ -1,20 +1,27 @@
 # CI and releases
 
-## Workflow
+## Channels
+
+One git branch (`main`). Two GitHub **release tags** (not git branches):
+
+| Tag | URL | Updates when |
+|-----|-----|--------------|
+| `staging` | https://github.com/voidwars/assets/releases/download/staging/pack.zip | PR **opened** or **updated** |
+| `latest` | https://github.com/voidwars/assets/releases/download/latest/pack.zip | PR **merged** to `main` |
+
+Direct pushes to `main` without a PR do not publish a release.
+
+## CI workflow
 
 File: `.github/workflows/packsquash.yml`
 
-On **every push** to any branch:
+| Event | Action |
+|-------|--------|
+| PR opened / new commits | PackSquash build → publish **`staging`** |
+| PR merged | PackSquash build → publish **`latest`** |
+| PR closed without merge | Nothing |
 
-1. Checkout the repository.
-2. Run [PackSquash](https://github.com/ComunidadAylas/PackSquash) on the `pack/` directory.
-3. Write optimised output to `/tmp/pack.zip`.
-
-On push to **`main`** only:
-
-4. Publish `/tmp/pack.zip` as a **pre-release** on GitHub Releases (`latest` tag, title "Latest Build").
-
-## PackSquash settings
+PackSquash config:
 
 ```toml
 pack_directory = 'pack'
@@ -22,42 +29,28 @@ output_file_path = '/tmp/pack.zip'
 zip_spec_conformance_level = 'disregard'
 ```
 
-`disregard` allows non-standard zip layout that PackSquash produces for optimised packs. Do not change unless you understand the downstream impact on how servers/clients load the archive.
+## Velocity proxies
 
-## Getting a build
+Production uses `latest` by default. Staging must set:
 
-| Method | When to use |
-|--------|-------------|
-| GitHub Releases (`latest`) | Server deployment, QA, players |
-| Local `pack/` folder | Active development — no optimisation, instant iteration |
-
-There is no Gradle or npm build in this repo. Local testing does not require PackSquash.
-
-## Optional: local PackSquash
-
-Install [PackSquash](https://github.com/ComunidadAylas/PackSquash) and run against `pack/` to preview compression and catch pack errors before pushing:
-
-```powershell
-# Example — adjust path to your PackSquash binary
-packsquash --config packsquash.toml
+```
+RESOURCE_PACK_URL=https://github.com/voidwars/assets/releases/download/staging/pack.zip
 ```
 
-A project-local `packsquash.toml` is not checked in yet; CI config is inline in the workflow file. Add a local config if you optimise packs frequently.
+The proxy polls the URL every ~30 seconds and pushes the pack when the SHA-1 hash changes.
 
-## CI failures
+## Pack format
 
-Common causes:
+| Minecraft | `min_format` / `max_format` |
+|-----------|-------------------------------|
+| **1.21.11** (current) | **75** |
+
+When upgrading Minecraft, look up the new format on the [pack format wiki](https://minecraft.wiki/w/Pack_format) and bump both fields in `pack/pack.mcmeta` together. Commit as `build(pack): bump pack format to … for 1.21.x`.
+
+## Troubleshooting
 
 | Symptom | Likely cause |
 |---------|--------------|
 | PackSquash parse error | Invalid JSON under `pack/` |
 | Missing texture | Model references a PNG that does not exist |
-| Workflow permission error | GitHub token / release action config (org settings) |
-
-Fix the underlying asset or workflow issue and push again — the workflow runs on every push.
-
-## Versioning
-
-The pack does not use semver tags per release today. `main` publishes a rolling `latest` pre-release artifact. Record the commit SHA or release timestamp when deploying to a server so you can roll back.
-
-Bump `pack/pack.mcmeta` format fields when raising the minimum Minecraft version — commit as `build(pack): bump pack format to …`.
+| Release step fails | Repo **Settings → Actions → General → Workflow permissions** must allow read/write |

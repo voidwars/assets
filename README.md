@@ -1,52 +1,52 @@
 # Etheria Resource Pack
 
-Custom Minecraft resource pack for **Etheria's Last Stand** (Voidwars). Provides item models, textures, GUI icons, armor trims, shaders, and ModelEngine mob assets used by the game server.
+Custom Minecraft resource pack for **Etheria's Last Stand** (Voidwars): item models, textures, GUI icons, armor trims, shaders, and ModelEngine mob assets.
 
-Target: **Minecraft 1.21.4** (pack format 75).
+**Target:** Minecraft **1.21.11** · pack format **75** (`pack/pack.mcmeta`)
 
-## Repository layout
+## Workflow
+
+```
+branch → PR → staging release → QA → merge PR → latest release
+```
+
+| | When | Download |
+|--|------|----------|
+| **Staging** | PR opened or updated | [staging/pack.zip](https://github.com/voidwars/assets/releases/download/staging/pack.zip) |
+| **Production** | PR merged to `main` | [latest/pack.zip](https://github.com/voidwars/assets/releases/download/latest/pack.zip) |
+
+1. Edit files under `pack/` only.
+2. Test locally — load `pack/` as a resource pack in Minecraft 1.21.11.
+3. Open a PR → CI publishes **staging**.
+4. QA on the staging server, then merge → CI publishes **latest**.
+
+Pushing directly to `main` does not create a release. See [docs/ci-and-releases.md](docs/ci-and-releases.md).
+
+## Layout
 
 | Path | Purpose |
 |------|---------|
-| `pack/` | **Authoritative pack** — CI builds and releases from here |
-| `pack/assets/minecraft/` | Vanilla namespace: items, models, textures, lang, shaders |
+| `pack/` | Authoritative pack — CI builds from here |
+| `pack/assets/minecraft/` | Items, models, textures, lang, shaders |
 | `pack/assets/modelengine/` | ModelEngine mob models and textures |
-| `.github/workflows/` | PackSquash CI and GitHub Releases |
-
-## Quick start
-
-1. Clone the repo.
-2. Edit assets under `pack/` only.
-3. Test locally by pointing Minecraft at `pack/` as a resource pack folder, or download the latest build from [GitHub Releases](https://github.com/voidwars/assets/releases).
-4. Commit using [Conventional Commits](docs/contributing.md).
-
-No build step is required for local testing — open `pack/` directly in the client. CI optimises the pack with [PackSquash](https://github.com/ComunidadAylas/PackSquash) on every push.
 
 ## Documentation
 
 | Topic | Guide |
 |-------|-------|
-| Folder structure and namespaces | [docs/structure.md](docs/structure.md) |
-| Custom model data (CMD) IDs and host items | [docs/custom-model-data.md](docs/custom-model-data.md) |
-| Adding a new item or icon | [docs/adding-assets.md](docs/adding-assets.md) |
-| Commits and pull requests | [docs/contributing.md](docs/contributing.md) |
-| CI, PackSquash, and releases | [docs/ci-and-releases.md](docs/ci-and-releases.md) |
+| Folder structure | [docs/structure.md](docs/structure.md) |
+| Custom model data (CMD) | [docs/custom-model-data.md](docs/custom-model-data.md) |
+| Adding an item or icon | [docs/adding-assets.md](docs/adding-assets.md) |
+| Commits and PRs | [docs/contributing.md](docs/contributing.md) |
+| CI and releases | [docs/ci-and-releases.md](docs/ci-and-releases.md) |
 
 ## Related repos
 
-- **voidwars-platform** — game server; assigns `custom_model_data` values via `VoidWarsModelData` in `services/paper-server/`. Any new CMD ID must be added there **and** in the matching `pack/assets/minecraft/items/<host>.json` entry.
+**voidwars-platform** assigns `custom_model_data` via `VoidWarsModelData` (`services/paper-server/`). New CMD IDs must be added there and in the matching `pack/assets/minecraft/items/<host>.json` entry.
 
-## Pack metadata
+## Servers
 
-```json
-// pack/pack.mcmeta
-{
-  "pack": {
-    "min_format": 75,
-    "max_format": 75,
-    "description": "Etheria's Last Stand"
-  }
-}
-```
-
-Bump `min_format` / `max_format` together when targeting a new Minecraft version.
+| Environment | Velocity `RESOURCE_PACK_URL` |
+|-------------|------------------------------|
+| Staging | `https://github.com/voidwars/assets/releases/download/staging/pack.zip` |
+| Production | omit (defaults to `latest`) |

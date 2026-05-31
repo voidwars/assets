@@ -2,35 +2,31 @@
 
 ## New custom item icon
 
-Typical flow for a new game item that uses an existing CMD range and host material.
+### 1. Allocate CMD ID (voidwars-platform)
 
-### 1. Allocate the CMD ID (voidwars-platform)
-
-In `VoidWarsModelData.java`, add an enum entry in the correct region with the next free ID. Example:
+Add an enum entry in `VoidWarsModelData.java` in the correct range:
 
 ```java
 MY_NEW_HERB(857),
 ```
 
-Use the server PR to land the ID before or alongside the pack change.
+Land the platform change before or alongside the pack PR.
 
-### 2. Create the texture
+### 2. Texture
 
-- Path: `pack/assets/minecraft/textures/item/<name>.png`
-- Match the resolution and style of similar icons (most item textures are small pixel art or Blockbench UV layouts).
-- Filename must match the model basename.
+`pack/assets/minecraft/textures/item/<name>.png` — match style of similar icons; basename must match the model.
 
-### 3. Create the model
+### 3. Model
 
-- Path: `pack/assets/minecraft/models/item/<name>.json`
-- Export from Blockbench using the existing item preset, or copy a similar model and adjust.
-- Flat icons use `"parent": "item/generated"` with `"layer0": "item/<name>"`.
-- 3D weapons/tools use element geometry — see `flint_sword.json` for a reference.
-- Set `"display"."gui"` rotation/translation so the icon is centred in inventory.
+`pack/assets/minecraft/models/item/<name>.json`
+
+- Flat icons: `"parent": "item/generated"` + `"layer0": "item/<name>"`
+- 3D items: Blockbench element model — see `flint_sword.json`
+- Adjust `"display"."gui"` so the icon sits correctly in inventory
 
 ### 4. Wire CMD dispatch
 
-Open the host item file for your CMD range (see [custom-model-data.md](custom-model-data.md)) and add a sorted entry:
+Add a sorted `"threshold"` entry in the correct host file (`pack/assets/minecraft/items/<host>.json`):
 
 ```json
 {
@@ -42,48 +38,30 @@ Open the host item file for your CMD range (see [custom-model-data.md](custom-mo
 }
 ```
 
-File: e.g. `pack/assets/minecraft/items/raw_iron.json` for gatherable nodes (801+).
+Host ↔ range mapping: [custom-model-data.md](custom-model-data.md).
 
 ### 5. Test
 
-1. Load `pack/` as a resource pack in Minecraft 1.21.4.
-2. On a dev server, give yourself the host item with the CMD:  
-   `/give @s raw_iron[custom_model_data=857]`
-3. Confirm inventory, ground, and hand displays.
+1. Load `pack/` in Minecraft **1.21.11**.
+2. `/give @s raw_iron[custom_model_data=857]` (swap host item as needed).
+3. Check inventory, ground, and hand display.
 
-## New GUI icon
+## Other asset types
 
-GUI icons (stash controls, pagination, etc.) follow the same steps but usually:
+| Type | Model | Texture | Host / CMD |
+|------|-------|---------|------------|
+| GUI icon | `models/item/gui_<name>.json` | `textures/item/gui_<name>.png` | `paper.json` (1400 band) |
+| Skill icon | `models/item/skill_<name>.json` | `textures/item/skill_<name>.png` | `brick.json` (1201–1255) |
+| Cartridge | `models/item/cartridge_<n>.json` | `textures/item/cartridge_<n>.png` | `brick.json` (1700–1713) |
+| ModelEngine mob | `modelengine/models/<id>/` | `modelengine/textures/entity/<id>.png` | server-side ModelEngine config |
 
-- Host: `paper.json` (1400 band) or another UI host as defined in `VoidWarsModelData`.
-- Scope commits as `feat(gui): …` — see [contributing.md](contributing.md).
-- Many GUI models are simple Blockbench cubes mapped to a single texture (`gui_trash.json`).
+## PR checklist
 
-## New skill icon
-
-- Model: `models/item/skill_<name>.json`
-- Texture: `textures/item/skill_<name>.png`
-- CMD: 1201–1255 range on **`brick.json`** host
-- Enum: `SKILL_<NAME>` in `VoidWarsModelData`
-
-## New ModelEngine mob
-
-1. Export bones to `pack/assets/modelengine/models/<mob_id>/`.
-2. Place entity texture at `pack/assets/modelengine/textures/entity/<mob_id>.png`.
-3. Configure the mob in ModelEngine on the server (outside this repo).
-4. If the mob needs an inventory preview, add entries on `leather_horse_armor.json` using `"model": "modelengine:<mob_id>/<bone>"`.
-
-## New cartridge icon
-
-- Models: `models/item/cartridge_<n>.json` (flat generated parent)
-- Textures: `textures/item/cartridge_<n>.png`
-- CMD: 1700–1713 on **`brick.json`** (shared with secure-container enum names in Java)
-
-## Checklist before opening a PR
-
-- [ ] JSON validates (no trailing commas)
-- [ ] Texture path in model matches an existing PNG
-- [ ] CMD threshold matches `VoidWarsModelData.dataId`
-- [ ] Entry inserted in ascending threshold order
-- [ ] Tested in client 1.21.4 with pack loaded
-- [ ] Commit message follows [contributing.md](contributing.md)
+- [ ] Changes under `pack/` only
+- [ ] JSON valid (no trailing commas, paths resolve)
+- [ ] CMD threshold matches `VoidWarsModelData`
+- [ ] Threshold entries sorted ascending in host JSON
+- [ ] Tested locally in Minecraft 1.21.11
+- [ ] Platform PR linked if CMD IDs were added
+- [ ] QA on staging server after PR publishes `staging`
+- [ ] Ready for production on merge (`latest` updates automatically)

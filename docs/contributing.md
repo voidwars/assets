@@ -1,61 +1,62 @@
 # Contributing
 
+## Workflow
+
+| Step | What you do | Release |
+|------|-------------|---------|
+| 1 | Branch from `main` (`feat/my-icons`) | — |
+| 2 | Edit under `pack/` — see [adding-assets.md](adding-assets.md) | — |
+| 3 | Test locally in Minecraft **1.21.11** | — |
+| 4 | Open PR (CI must pass) | **`staging`** |
+| 5 | QA on staging server | — |
+| 6 | Merge PR | **`latest`** (production) |
+
+New CMD IDs require a matching entry in voidwars-platform `VoidWarsModelData` — link both PRs.
+
+## Pull requests
+
+- One asset batch per PR when possible.
+- Include before/after screenshots for visual changes.
+- Use the PR template checklist.
+- Do not push asset changes directly to `main`.
+
 ## Commit messages
 
-Use [Conventional Commits](https://www.conventionalcommits.org/):
+[Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 <type>(<scope>): <imperative summary>
 ```
-
-### Types
 
 | Type | Use for |
 |------|---------|
 | `feat` | New or updated textures, models, GUI icons, mob models, lang |
 | `fix` | Broken paths, missing textures, wrong CMD thresholds |
 | `refactor` | Reorganisation or format migration without visual change |
-| `build` | `pack.mcmeta`, PackSquash/CI, pack metadata |
+| `build` | `pack.mcmeta`, CI workflow, pack metadata |
 | `chore` | Gitignore, bulk renames |
 | `docs` | README and `docs/` only |
 
-### Scopes
-
-`items`, `models`, `textures`, `gui`, `skills`, `containers`, `modelengine`, `lang`, `shaders`, `pack`
-
-Omit scope when a change spans multiple areas (e.g. new item = model + texture + item entry).
-
-### Examples
+Scopes: `items`, `models`, `textures`, `gui`, `skills`, `containers`, `modelengine`, `lang`, `shaders`, `pack`
 
 ```
 feat(gui): add stash control icons for mailbox, trash, and pagination
-feat(items): migrate stick CMD variants to items/stick.json
 fix(textures): correct gui_trash UV mapping
-docs: add pack structure and CMD reference guides
+build(pack): bump pack format to 75 for 1.21.11
 ```
-
-## Pull requests
-
-1. Branch from `main`.
-2. Keep PRs focused — one asset batch or one migration per PR when possible.
-3. Include **before/after screenshots** for visual changes (inventory GUI is enough).
-4. Note the matching **voidwars-platform PR** if CMD IDs were added server-side.
-5. CI must pass (PackSquash optimisation — see [ci-and-releases.md](ci-and-releases.md)).
 
 ## What to commit together
 
-| Change | Commit together |
-|--------|-----------------|
-| New item icon | `VoidWarsModelData` (platform) + item entry + model + texture |
+| Change | Include in same PR |
+|--------|-------------------|
+| New item icon | platform `VoidWarsModelData` + item entry + model + texture |
 | GUI icon | model + texture + host item entry |
-| Format migration | all moved JSON for that host item |
-| Docs only | `docs/` and/or `README.md` — type `docs` |
+| Format migration | all JSON moved for that host item |
 
-Do **not** edit outside `pack/` — it is not built or released.
+Edit **`pack/`** only — nothing outside it is built or released.
 
-## JSON hygiene
+## JSON rules
 
-- Standard JSON only (no comments, no trailing commas).
-- Use tabs or spaces consistently within a file (existing models vary; match the file you edit).
-- Model references omit the namespace for minecraft items: `"model": "item/flint_sword"`.
-- ModelEngine references use the namespace: `"model": "modelengine:vw_mimic/tongue1"`.
+- Standard JSON only — no comments, no trailing commas.
+- Minecraft item models: `"model": "item/flint_sword"`
+- ModelEngine models: `"model": "modelengine:vw_mimic/tongue1"`
