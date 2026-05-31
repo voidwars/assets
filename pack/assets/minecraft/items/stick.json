@@ -1,0 +1,559 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/stick"
+        },
+        "entries": [
+            {
+                "threshold": 101,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_sword"
+                }
+            },
+            {
+                "threshold": 102,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_sword"
+                }
+            },
+            {
+                "threshold": 103,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_sword"
+                }
+            },
+            {
+                "threshold": 104,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_sword"
+                }
+            },
+            {
+                "threshold": 105,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_sword"
+                }
+            },
+            {
+                "threshold": 106,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_sword"
+                }
+            },
+            {
+                "threshold": 111,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_dagger"
+                }
+            },
+            {
+                "threshold": 112,
+                "model": {
+                    "type": "model",
+                    "model": "item/koi_dagger"
+                }
+            },
+            {
+                "threshold": 113,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_dagger"
+                }
+            },
+            {
+                "threshold": 114,
+                "model": {
+                    "type": "model",
+                    "model": "item/gar_dagger"
+                }
+            },
+            {
+                "threshold": 115,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_dagger"
+                }
+            },
+            {
+                "threshold": 116,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_dagger"
+                }
+            },
+            {
+                "threshold": 121,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_mace"
+                }
+            },
+            {
+                "threshold": 122,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_mace"
+                }
+            },
+            {
+                "threshold": 123,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_mace"
+                }
+            },
+            {
+                "threshold": 124,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_mace"
+                }
+            },
+            {
+                "threshold": 125,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_mace"
+                }
+            },
+            {
+                "threshold": 126,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_mace"
+                }
+            },
+            {
+                "threshold": 131,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_battleaxe"
+                }
+            },
+            {
+                "threshold": 132,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_battleaxe"
+                }
+            },
+            {
+                "threshold": 133,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_battleaxe"
+                }
+            },
+            {
+                "threshold": 134,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_battleaxe"
+                }
+            },
+            {
+                "threshold": 135,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_battleaxe"
+                }
+            },
+            {
+                "threshold": 136,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_battleaxe"
+                }
+            },
+            {
+                "threshold": 141,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_spear"
+                }
+            },
+            {
+                "threshold": 142,
+                "model": {
+                    "type": "model",
+                    "model": "item/koi_spear"
+                }
+            },
+            {
+                "threshold": 143,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_spear"
+                }
+            },
+            {
+                "threshold": 144,
+                "model": {
+                    "type": "model",
+                    "model": "item/gar_spear"
+                }
+            },
+            {
+                "threshold": 145,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_spear"
+                }
+            },
+            {
+                "threshold": 146,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_spear"
+                }
+            },
+            {
+                "threshold": 151,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_hammer"
+                }
+            },
+            {
+                "threshold": 152,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_hammer"
+                }
+            },
+            {
+                "threshold": 153,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_hammer"
+                }
+            },
+            {
+                "threshold": 154,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_hammer"
+                }
+            },
+            {
+                "threshold": 155,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_hammer"
+                }
+            },
+            {
+                "threshold": 156,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_hammer"
+                }
+            },
+            {
+                "threshold": 201,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_pickaxe"
+                }
+            },
+            {
+                "threshold": 202,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_pickaxe"
+                }
+            },
+            {
+                "threshold": 203,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_pickaxe"
+                }
+            },
+            {
+                "threshold": 204,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_pickaxe"
+                }
+            },
+            {
+                "threshold": 205,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_pickaxe"
+                }
+            },
+            {
+                "threshold": 206,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_pickaxe"
+                }
+            },
+            {
+                "threshold": 211,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_quarry_hammer"
+                }
+            },
+            {
+                "threshold": 212,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_quarry_hammer"
+                }
+            },
+            {
+                "threshold": 213,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_quarry_hammer"
+                }
+            },
+            {
+                "threshold": 214,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_quarry_hammer"
+                }
+            },
+            {
+                "threshold": 215,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_quarry_hammer"
+                }
+            },
+            {
+                "threshold": 216,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_quarry_hammer"
+                }
+            },
+            {
+                "threshold": 221,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_sickle"
+                }
+            },
+            {
+                "threshold": 222,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_sickle"
+                }
+            },
+            {
+                "threshold": 223,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_sickle"
+                }
+            },
+            {
+                "threshold": 224,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_sickle"
+                }
+            },
+            {
+                "threshold": 225,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_sickle"
+                }
+            },
+            {
+                "threshold": 226,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_sickle"
+                }
+            },
+            {
+                "threshold": 231,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_lumber_axe"
+                }
+            },
+            {
+                "threshold": 232,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_lumber_axe"
+                }
+            },
+            {
+                "threshold": 233,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_lumber_axe"
+                }
+            },
+            {
+                "threshold": 234,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_lumber_axe"
+                }
+            },
+            {
+                "threshold": 235,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_lumber_axe"
+                }
+            },
+            {
+                "threshold": 236,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_lumber_axe"
+                }
+            },
+            {
+                "threshold": 241,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_secateurs"
+                }
+            },
+            {
+                "threshold": 242,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_secateurs"
+                }
+            },
+            {
+                "threshold": 243,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_secateurs"
+                }
+            },
+            {
+                "threshold": 244,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_secateurs"
+                }
+            },
+            {
+                "threshold": 245,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_secateurs"
+                }
+            },
+            {
+                "threshold": 246,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_secateurs"
+                }
+            },
+            {
+                "threshold": 251,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_harpoon"
+                }
+            },
+            {
+                "threshold": 252,
+                "model": {
+                    "type": "model",
+                    "model": "item/koi_harpoon"
+                }
+            },
+            {
+                "threshold": 253,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_harpoon"
+                }
+            },
+            {
+                "threshold": 254,
+                "model": {
+                    "type": "model",
+                    "model": "item/gar_harpoon"
+                }
+            },
+            {
+                "threshold": 255,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_harpoon"
+                }
+            },
+            {
+                "threshold": 256,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_harpoon"
+                }
+            },
+            {
+                "threshold": 261,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_skinning_knife"
+                }
+            },
+            {
+                "threshold": 262,
+                "model": {
+                    "type": "model",
+                    "model": "item/koi_skinning_knife"
+                }
+            },
+            {
+                "threshold": 263,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_skinning_knife"
+                }
+            },
+            {
+                "threshold": 264,
+                "model": {
+                    "type": "model",
+                    "model": "item/gar_skinning_knife"
+                }
+            },
+            {
+                "threshold": 265,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_skinning_knife"
+                }
+            },
+            {
+                "threshold": 266,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_skinning_knife"
+                }
+            }
+        ]
+    }
+}

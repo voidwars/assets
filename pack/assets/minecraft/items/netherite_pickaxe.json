@@ -1,0 +1,118 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/netherite_pickaxe"
+        },
+        "entries": [
+            {
+                "threshold": 304,
+                "model": {
+                    "type": "model",
+                    "model": "item/contract_point"
+                }
+            },
+            {
+                "threshold": 1301,
+                "model": {
+                    "type": "model",
+                    "model": "item/mf_helmet"
+                }
+            },
+            {
+                "threshold": 1402,
+                "model": {
+                    "type": "model",
+                    "model": "item/searching_icon"
+                }
+            },
+            {
+                "threshold": 1601,
+                "model": {
+                    "type": "model",
+                    "model": "item/blaze_task"
+                }
+            },
+            {
+                "threshold": 1602,
+                "model": {
+                    "type": "model",
+                    "model": "item/forestboss_task"
+                }
+            },
+            {
+                "threshold": 1603,
+                "model": {
+                    "type": "model",
+                    "model": "item/magmacube_task"
+                }
+            },
+            {
+                "threshold": 1604,
+                "model": {
+                    "type": "model",
+                    "model": "item/pillager_task"
+                }
+            },
+            {
+                "threshold": 1605,
+                "model": {
+                    "type": "model",
+                    "model": "item/shuffler_task"
+                }
+            },
+            {
+                "threshold": 1606,
+                "model": {
+                    "type": "model",
+                    "model": "item/silverfish_task"
+                }
+            },
+            {
+                "threshold": 1607,
+                "model": {
+                    "type": "model",
+                    "model": "item/slime_task"
+                }
+            },
+            {
+                "threshold": 1608,
+                "model": {
+                    "type": "model",
+                    "model": "item/spider_task"
+                }
+            },
+            {
+                "threshold": 1609,
+                "model": {
+                    "type": "model",
+                    "model": "item/stray_task"
+                }
+            },
+            {
+                "threshold": 1610,
+                "model": {
+                    "type": "model",
+                    "model": "item/zombie_task"
+                }
+            },
+            {
+                "threshold": 1611,
+                "model": {
+                    "type": "model",
+                    "model": "item/skeleton_task"
+                }
+            },
+            {
+                "threshold": 1612,
+                "model": {
+                    "type": "model",
+                    "model": "item/wither_skeleton_task"
+                }
+            }
+        ]
+    }
+}

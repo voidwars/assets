@@ -1,0 +1,139 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "minecraft:item/chainmail_helmet"
+        },
+        "entries": [
+            {
+                "threshold": 1501,
+                "model": {
+                    "type": "model",
+                    "model": "item/coarse_padded_helmet"
+                }
+            },
+            {
+                "threshold": 1502,
+                "model": {
+                    "type": "model",
+                    "model": "item/rugged_padded_helmet"
+                }
+            },
+            {
+                "threshold": 1503,
+                "model": {
+                    "type": "model",
+                    "model": "item/steeled_padded_helmet"
+                }
+            },
+            {
+                "threshold": 1504,
+                "model": {
+                    "type": "model",
+                    "model": "item/mighty_padded_helmet"
+                }
+            },
+            {
+                "threshold": 1505,
+                "model": {
+                    "type": "model",
+                    "model": "item/robust_padded_helmet"
+                }
+            },
+            {
+                "threshold": 1506,
+                "model": {
+                    "type": "model",
+                    "model": "item/reinforced_padded_helmet"
+                }
+            },
+            {
+                "threshold": 1507,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_chainmail_helmet"
+                }
+            },
+            {
+                "threshold": 1508,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_chainmail_helmet"
+                }
+            },
+            {
+                "threshold": 1509,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_chainmail_helmet"
+                }
+            },
+            {
+                "threshold": 1510,
+                "model": {
+                    "type": "model",
+                    "model": "item/gold_chainmail_helmet"
+                }
+            },
+            {
+                "threshold": 1511,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_chainmail_helmet"
+                }
+            },
+            {
+                "threshold": 1512,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_chainmail_helmet"
+                }
+            },
+            {
+                "threshold": 1513,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_platemail_helmet"
+                }
+            },
+            {
+                "threshold": 1514,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_platemail_helmet"
+                }
+            },
+            {
+                "threshold": 1515,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_platemail_helmet"
+                }
+            },
+            {
+                "threshold": 1516,
+                "model": {
+                    "type": "model",
+                    "model": "item/gold_platemail_helmet"
+                }
+            },
+            {
+                "threshold": 1517,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_platemail_helmet"
+                }
+            },
+            {
+                "threshold": 1518,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_platemail_helmet"
+                }
+            }
+        ]
+    }
+}

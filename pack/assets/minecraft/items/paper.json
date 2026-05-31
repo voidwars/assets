@@ -1,0 +1,209 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/paper"
+        },
+        "entries": [
+            {
+                "threshold": 601,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_trash_mobs"
+                }
+            },
+            {
+                "threshold": 602,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_medium_mobs"
+                }
+            },
+            {
+                "threshold": 603,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_hard_mobs"
+                }
+            },
+            {
+                "threshold": 604,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_village_raiders"
+                }
+            },
+            {
+                "threshold": 605,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_zombie"
+                }
+            },
+            {
+                "threshold": 606,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_skeleton"
+                }
+            },
+            {
+                "threshold": 607,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_creeper"
+                }
+            },
+            {
+                "threshold": 608,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_spider"
+                }
+            },
+            {
+                "threshold": 609,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_slime"
+                }
+            },
+            {
+                "threshold": 610,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_food_low"
+                }
+            },
+            {
+                "threshold": 611,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_food_high"
+                }
+            },
+            {
+                "threshold": 612,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_weapon_low"
+                }
+            },
+            {
+                "threshold": 613,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_weapon_high"
+                }
+            },
+            {
+                "threshold": 614,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_armor_low"
+                }
+            },
+            {
+                "threshold": 615,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_armor_high"
+                }
+            },
+            {
+                "threshold": 616,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_money_low"
+                }
+            },
+            {
+                "threshold": 617,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_money_high"
+                }
+            },
+            {
+                "threshold": 618,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_medical_low"
+                }
+            },
+            {
+                "threshold": 619,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_medical_high"
+                }
+            },
+            {
+                "threshold": 620,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_barter_low"
+                }
+            },
+            {
+                "threshold": 621,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_barter_high"
+                }
+            },
+            {
+                "threshold": 623,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_valuable_low"
+                }
+            },
+            {
+                "threshold": 624,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_valuable_high"
+                }
+            },
+            {
+                "threshold": 625,
+                "model": {
+                    "type": "model",
+                    "model": "item/container_forest_boss"
+                }
+            },
+            {
+                "threshold": 1403,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui_page_back"
+                }
+            },
+            {
+                "threshold": 1404,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui_page_forward"
+                }
+            },
+            {
+                "threshold": 1405,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui_mailbox"
+                }
+            },
+            {
+                "threshold": 1406,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui_trash"
+                }
+            }
+        ]
+    }
+}

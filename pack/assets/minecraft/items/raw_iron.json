@@ -1,0 +1,307 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/raw_iron"
+        },
+        "entries": [
+            {
+                "threshold": 801,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_ore_cluster"
+                }
+            },
+            {
+                "threshold": 802,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_ore_cluster"
+                }
+            },
+            {
+                "threshold": 803,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_ore_cluster"
+                }
+            },
+            {
+                "threshold": 804,
+                "model": {
+                    "type": "model",
+                    "model": "item/gold_ore_cluster"
+                }
+            },
+            {
+                "threshold": 805,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_ore_cluster"
+                }
+            },
+            {
+                "threshold": 806,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_ore_cluster"
+                }
+            },
+            {
+                "threshold": 811,
+                "model": {
+                    "type": "model",
+                    "model": "item/jute_patch"
+                }
+            },
+            {
+                "threshold": 812,
+                "model": {
+                    "type": "model",
+                    "model": "item/lotus_patch"
+                }
+            },
+            {
+                "threshold": 813,
+                "model": {
+                    "type": "model",
+                    "model": "item/yucca_patch"
+                }
+            },
+            {
+                "threshold": 814,
+                "model": {
+                    "type": "model",
+                    "model": "item/flax_patch"
+                }
+            },
+            {
+                "threshold": 815,
+                "model": {
+                    "type": "model",
+                    "model": "item/hemp_patch"
+                }
+            },
+            {
+                "threshold": 816,
+                "model": {
+                    "type": "model",
+                    "model": "item/bamboo_patch"
+                }
+            },
+            {
+                "threshold": 821,
+                "model": {
+                    "type": "model",
+                    "model": "item/birch_stump"
+                }
+            },
+            {
+                "threshold": 822,
+                "model": {
+                    "type": "model",
+                    "model": "item/oak_stump"
+                }
+            },
+            {
+                "threshold": 823,
+                "model": {
+                    "type": "model",
+                    "model": "item/jungle_stump"
+                }
+            },
+            {
+                "threshold": 824,
+                "model": {
+                    "type": "model",
+                    "model": "item/spruce_stump"
+                }
+            },
+            {
+                "threshold": 825,
+                "model": {
+                    "type": "model",
+                    "model": "item/dark_oak_stump"
+                }
+            },
+            {
+                "threshold": 826,
+                "model": {
+                    "type": "model",
+                    "model": "item/crimson_stump"
+                }
+            },
+            {
+                "threshold": 831,
+                "model": {
+                    "type": "model",
+                    "model": "item/dead_rabbit"
+                }
+            },
+            {
+                "threshold": 832,
+                "model": {
+                    "type": "model",
+                    "model": "item/dead_fox"
+                }
+            },
+            {
+                "threshold": 833,
+                "model": {
+                    "type": "model",
+                    "model": "item/dead_cow"
+                }
+            },
+            {
+                "threshold": 834,
+                "model": {
+                    "type": "model",
+                    "model": "item/dead_wolf"
+                }
+            },
+            {
+                "threshold": 835,
+                "model": {
+                    "type": "model",
+                    "model": "item/dead_polar_bear"
+                }
+            },
+            {
+                "threshold": 836,
+                "model": {
+                    "type": "model",
+                    "model": "item/dead_hoglin"
+                }
+            },
+            {
+                "threshold": 841,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_quarry_rock"
+                }
+            },
+            {
+                "threshold": 842,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_quarry_rock"
+                }
+            },
+            {
+                "threshold": 843,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_quarry_rock"
+                }
+            },
+            {
+                "threshold": 844,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_quarry_rock"
+                }
+            },
+            {
+                "threshold": 845,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_quarry_rock"
+                }
+            },
+            {
+                "threshold": 846,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_quarry_rock"
+                }
+            },
+            {
+                "threshold": 851,
+                "model": {
+                    "type": "model",
+                    "model": "item/nightshade_herb"
+                }
+            },
+            {
+                "threshold": 852,
+                "model": {
+                    "type": "model",
+                    "model": "item/cindermoss_herb"
+                }
+            },
+            {
+                "threshold": 853,
+                "model": {
+                    "type": "model",
+                    "model": "item/ironroot_herb"
+                }
+            },
+            {
+                "threshold": 854,
+                "model": {
+                    "type": "model",
+                    "model": "item/goldengrass_herb"
+                }
+            },
+            {
+                "threshold": 855,
+                "model": {
+                    "type": "model",
+                    "model": "item/crystalberry_herb"
+                }
+            },
+            {
+                "threshold": 856,
+                "model": {
+                    "type": "model",
+                    "model": "item/endershroom_herb"
+                }
+            },
+            {
+                "threshold": 861,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_school"
+                }
+            },
+            {
+                "threshold": 862,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_koi_school"
+                }
+            },
+            {
+                "threshold": 863,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_sturgeon_school"
+                }
+            },
+            {
+                "threshold": 864,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_gar_school"
+                }
+            },
+            {
+                "threshold": 865,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_eel_school"
+                }
+            },
+            {
+                "threshold": 866,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_snapper_school"
+                }
+            }
+        ]
+    }
+}

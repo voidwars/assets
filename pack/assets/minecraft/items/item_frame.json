@@ -1,0 +1,174 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/item_frame"
+        },
+        "entries": [
+            {
+                "threshold": 701,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_trash_mobs"
+                }
+            },
+            {
+                "threshold": 702,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_medium_mobs"
+                }
+            },
+            {
+                "threshold": 703,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_hard_mobs"
+                }
+            },
+            {
+                "threshold": 704,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_village_raiders"
+                }
+            },
+            {
+                "threshold": 705,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_zombie"
+                }
+            },
+            {
+                "threshold": 706,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_skeleton"
+                }
+            },
+            {
+                "threshold": 707,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_creeper"
+                }
+            },
+            {
+                "threshold": 708,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_spider"
+                }
+            },
+            {
+                "threshold": 709,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_slime"
+                }
+            },
+            {
+                "threshold": 710,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_food_low"
+                }
+            },
+            {
+                "threshold": 711,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_food_high"
+                }
+            },
+            {
+                "threshold": 712,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_weapon_low"
+                }
+            },
+            {
+                "threshold": 713,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_weapon_high"
+                }
+            },
+            {
+                "threshold": 714,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_armor_low"
+                }
+            },
+            {
+                "threshold": 715,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_armor_high"
+                }
+            },
+            {
+                "threshold": 716,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_money_low"
+                }
+            },
+            {
+                "threshold": 717,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_money_high"
+                }
+            },
+            {
+                "threshold": 718,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_medical_low"
+                }
+            },
+            {
+                "threshold": 719,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_medical_high"
+                }
+            },
+            {
+                "threshold": 720,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_barter_low"
+                }
+            },
+            {
+                "threshold": 721,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_barter_high"
+                }
+            },
+            {
+                "threshold": 723,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_valuable_low"
+                }
+            },
+            {
+                "threshold": 724,
+                "model": {
+                    "type": "model",
+                    "model": "item/loose_valuable_high"
+                }
+            }
+        ]
+    }
+}

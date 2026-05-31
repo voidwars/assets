@@ -1,0 +1,1133 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/brick"
+        },
+        "entries": [
+            {
+                "threshold": 901,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_raw"
+                }
+            },
+            {
+                "threshold": 902,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_raw"
+                }
+            },
+            {
+                "threshold": 903,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_raw"
+                }
+            },
+            {
+                "threshold": 904,
+                "model": {
+                    "type": "model",
+                    "model": "item/gold_raw"
+                }
+            },
+            {
+                "threshold": 905,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_raw"
+                }
+            },
+            {
+                "threshold": 906,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_raw"
+                }
+            },
+            {
+                "threshold": 911,
+                "model": {
+                    "type": "model",
+                    "model": "item/jute_fiber"
+                }
+            },
+            {
+                "threshold": 912,
+                "model": {
+                    "type": "model",
+                    "model": "item/lotus_fiber"
+                }
+            },
+            {
+                "threshold": 913,
+                "model": {
+                    "type": "model",
+                    "model": "item/yucca_fiber"
+                }
+            },
+            {
+                "threshold": 914,
+                "model": {
+                    "type": "model",
+                    "model": "item/flax_fiber"
+                }
+            },
+            {
+                "threshold": 915,
+                "model": {
+                    "type": "model",
+                    "model": "item/hemp_fiber"
+                }
+            },
+            {
+                "threshold": 916,
+                "model": {
+                    "type": "model",
+                    "model": "item/bamboo_fiber"
+                }
+            },
+            {
+                "threshold": 921,
+                "model": {
+                    "type": "model",
+                    "model": "item/birch_wood_log"
+                }
+            },
+            {
+                "threshold": 922,
+                "model": {
+                    "type": "model",
+                    "model": "item/oak_wood_log"
+                }
+            },
+            {
+                "threshold": 923,
+                "model": {
+                    "type": "model",
+                    "model": "item/jungle_wood_log"
+                }
+            },
+            {
+                "threshold": 924,
+                "model": {
+                    "type": "model",
+                    "model": "item/spruce_wood_log"
+                }
+            },
+            {
+                "threshold": 925,
+                "model": {
+                    "type": "model",
+                    "model": "item/dark_oak_wood_log"
+                }
+            },
+            {
+                "threshold": 926,
+                "model": {
+                    "type": "model",
+                    "model": "item/crimson_wood_log"
+                }
+            },
+            {
+                "threshold": 931,
+                "model": {
+                    "type": "model",
+                    "model": "item/coarse_hide"
+                }
+            },
+            {
+                "threshold": 932,
+                "model": {
+                    "type": "model",
+                    "model": "item/rugged_hide"
+                }
+            },
+            {
+                "threshold": 933,
+                "model": {
+                    "type": "model",
+                    "model": "item/steeled_hide"
+                }
+            },
+            {
+                "threshold": 934,
+                "model": {
+                    "type": "model",
+                    "model": "item/mighty_hide"
+                }
+            },
+            {
+                "threshold": 935,
+                "model": {
+                    "type": "model",
+                    "model": "item/robust_hide"
+                }
+            },
+            {
+                "threshold": 936,
+                "model": {
+                    "type": "model",
+                    "model": "item/reinforced_hide"
+                }
+            },
+            {
+                "threshold": 941,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_rock"
+                }
+            },
+            {
+                "threshold": 942,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_rock"
+                }
+            },
+            {
+                "threshold": 943,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_rock"
+                }
+            },
+            {
+                "threshold": 944,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_rock"
+                }
+            },
+            {
+                "threshold": 945,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_rock"
+                }
+            },
+            {
+                "threshold": 946,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_rock"
+                }
+            },
+            {
+                "threshold": 951,
+                "model": {
+                    "type": "model",
+                    "model": "item/nightshade_grimy_herb"
+                }
+            },
+            {
+                "threshold": 952,
+                "model": {
+                    "type": "model",
+                    "model": "item/cindermoss_grimy_herb"
+                }
+            },
+            {
+                "threshold": 953,
+                "model": {
+                    "type": "model",
+                    "model": "item/ironroot_grimy_herb"
+                }
+            },
+            {
+                "threshold": 954,
+                "model": {
+                    "type": "model",
+                    "model": "item/goldengrass_grimy_herb"
+                }
+            },
+            {
+                "threshold": 955,
+                "model": {
+                    "type": "model",
+                    "model": "item/crystalberry_grimy_herb"
+                }
+            },
+            {
+                "threshold": 956,
+                "model": {
+                    "type": "model",
+                    "model": "item/endershroom_grimy_herb"
+                }
+            },
+            {
+                "threshold": 961,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_fish"
+                }
+            },
+            {
+                "threshold": 962,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_koi_fish"
+                }
+            },
+            {
+                "threshold": 963,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_sturgeon_fish"
+                }
+            },
+            {
+                "threshold": 964,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_gar_fish"
+                }
+            },
+            {
+                "threshold": 965,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_eel_fish"
+                }
+            },
+            {
+                "threshold": 966,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_snapper_fish"
+                }
+            },
+            {
+                "threshold": 1001,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_processed"
+                }
+            },
+            {
+                "threshold": 1002,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_processed"
+                }
+            },
+            {
+                "threshold": 1003,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_processed"
+                }
+            },
+            {
+                "threshold": 1004,
+                "model": {
+                    "type": "model",
+                    "model": "item/gold_processed"
+                }
+            },
+            {
+                "threshold": 1005,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_processed"
+                }
+            },
+            {
+                "threshold": 1006,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_processed"
+                }
+            },
+            {
+                "threshold": 1011,
+                "model": {
+                    "type": "model",
+                    "model": "item/jute_cloth"
+                }
+            },
+            {
+                "threshold": 1012,
+                "model": {
+                    "type": "model",
+                    "model": "item/lotus_cloth"
+                }
+            },
+            {
+                "threshold": 1013,
+                "model": {
+                    "type": "model",
+                    "model": "item/yucca_cloth"
+                }
+            },
+            {
+                "threshold": 1014,
+                "model": {
+                    "type": "model",
+                    "model": "item/flax_cloth"
+                }
+            },
+            {
+                "threshold": 1015,
+                "model": {
+                    "type": "model",
+                    "model": "item/hemp_cloth"
+                }
+            },
+            {
+                "threshold": 1016,
+                "model": {
+                    "type": "model",
+                    "model": "item/bamboo_cloth"
+                }
+            },
+            {
+                "threshold": 1021,
+                "model": {
+                    "type": "model",
+                    "model": "item/birch_wood_plank"
+                }
+            },
+            {
+                "threshold": 1022,
+                "model": {
+                    "type": "model",
+                    "model": "item/oak_wood_plank"
+                }
+            },
+            {
+                "threshold": 1023,
+                "model": {
+                    "type": "model",
+                    "model": "item/jungle_wood_plank"
+                }
+            },
+            {
+                "threshold": 1024,
+                "model": {
+                    "type": "model",
+                    "model": "item/spruce_wood_plank"
+                }
+            },
+            {
+                "threshold": 1025,
+                "model": {
+                    "type": "model",
+                    "model": "item/dark_oak_wood_plank"
+                }
+            },
+            {
+                "threshold": 1026,
+                "model": {
+                    "type": "model",
+                    "model": "item/crimson_wood_plank"
+                }
+            },
+            {
+                "threshold": 1031,
+                "model": {
+                    "type": "model",
+                    "model": "item/coarse_leather"
+                }
+            },
+            {
+                "threshold": 1032,
+                "model": {
+                    "type": "model",
+                    "model": "item/rugged_leather"
+                }
+            },
+            {
+                "threshold": 1033,
+                "model": {
+                    "type": "model",
+                    "model": "item/steeled_leather"
+                }
+            },
+            {
+                "threshold": 1034,
+                "model": {
+                    "type": "model",
+                    "model": "item/mighty_leather"
+                }
+            },
+            {
+                "threshold": 1035,
+                "model": {
+                    "type": "model",
+                    "model": "item/robust_leather"
+                }
+            },
+            {
+                "threshold": 1036,
+                "model": {
+                    "type": "model",
+                    "model": "item/reinforced_leather"
+                }
+            },
+            {
+                "threshold": 1041,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_brick"
+                }
+            },
+            {
+                "threshold": 1042,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_brick"
+                }
+            },
+            {
+                "threshold": 1043,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_brick"
+                }
+            },
+            {
+                "threshold": 1044,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_brick"
+                }
+            },
+            {
+                "threshold": 1045,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_brick"
+                }
+            },
+            {
+                "threshold": 1046,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_brick"
+                }
+            },
+            {
+                "threshold": 1051,
+                "model": {
+                    "type": "model",
+                    "model": "item/nightshade_blend"
+                }
+            },
+            {
+                "threshold": 1052,
+                "model": {
+                    "type": "model",
+                    "model": "item/cindermoss_blend"
+                }
+            },
+            {
+                "threshold": 1053,
+                "model": {
+                    "type": "model",
+                    "model": "item/ironroot_blend"
+                }
+            },
+            {
+                "threshold": 1054,
+                "model": {
+                    "type": "model",
+                    "model": "item/goldengrass_blend"
+                }
+            },
+            {
+                "threshold": 1055,
+                "model": {
+                    "type": "model",
+                    "model": "item/crystalberry_blend"
+                }
+            },
+            {
+                "threshold": 1056,
+                "model": {
+                    "type": "model",
+                    "model": "item/endershroom_blend"
+                }
+            },
+            {
+                "threshold": 1061,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_scale"
+                }
+            },
+            {
+                "threshold": 1062,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_koi_scale"
+                }
+            },
+            {
+                "threshold": 1063,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_sturgeon_scale"
+                }
+            },
+            {
+                "threshold": 1064,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_gar_scale"
+                }
+            },
+            {
+                "threshold": 1065,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_eel_scale"
+                }
+            },
+            {
+                "threshold": 1066,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_snapper_scale"
+                }
+            },
+            {
+                "threshold": 1101,
+                "model": {
+                    "type": "model",
+                    "model": "item/fire_essence"
+                }
+            },
+            {
+                "threshold": 1102,
+                "model": {
+                    "type": "model",
+                    "model": "item/ice_essence"
+                }
+            },
+            {
+                "threshold": 1103,
+                "model": {
+                    "type": "model",
+                    "model": "item/air_essence"
+                }
+            },
+            {
+                "threshold": 1104,
+                "model": {
+                    "type": "model",
+                    "model": "item/earth_essence"
+                }
+            },
+            {
+                "threshold": 1105,
+                "model": {
+                    "type": "model",
+                    "model": "item/lightning_essence"
+                }
+            },
+            {
+                "threshold": 1106,
+                "model": {
+                    "type": "model",
+                    "model": "item/light_essence"
+                }
+            },
+            {
+                "threshold": 1107,
+                "model": {
+                    "type": "model",
+                    "model": "item/dark_essence"
+                }
+            },
+            {
+                "threshold": 1201,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_unarmed"
+                }
+            },
+            {
+                "threshold": 1202,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_light_weaponry"
+                }
+            },
+            {
+                "threshold": 1203,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_heavy_weaponry"
+                }
+            },
+            {
+                "threshold": 1204,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_melee"
+                }
+            },
+            {
+                "threshold": 1205,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_ranged"
+                }
+            },
+            {
+                "threshold": 1206,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_dagger"
+                }
+            },
+            {
+                "threshold": 1207,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_sword"
+                }
+            },
+            {
+                "threshold": 1208,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_mace"
+                }
+            },
+            {
+                "threshold": 1209,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_spear"
+                }
+            },
+            {
+                "threshold": 1210,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_battleaxe"
+                }
+            },
+            {
+                "threshold": 1211,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_hammer"
+                }
+            },
+            {
+                "threshold": 1212,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_bow"
+                }
+            },
+            {
+                "threshold": 1213,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_crossbow"
+                }
+            },
+            {
+                "threshold": 1214,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_resilience"
+                }
+            },
+            {
+                "threshold": 1215,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_cloth_armor"
+                }
+            },
+            {
+                "threshold": 1216,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_chain_armor"
+                }
+            },
+            {
+                "threshold": 1217,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_plate_armor"
+                }
+            },
+            {
+                "threshold": 1218,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_first_aid"
+                }
+            },
+            {
+                "threshold": 1219,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_adrenaline"
+                }
+            },
+            {
+                "threshold": 1220,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_agility"
+                }
+            },
+            {
+                "threshold": 1222,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_throwing"
+                }
+            },
+            {
+                "threshold": 1223,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_searching"
+                }
+            },
+            {
+                "threshold": 1224,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_puzzling"
+                }
+            },
+            {
+                "threshold": 1225,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_charisma"
+                }
+            },
+            {
+                "threshold": 1226,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_endurance"
+                }
+            },
+            {
+                "threshold": 1227,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_mining"
+                }
+            },
+            {
+                "threshold": 1228,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_woodcutting"
+                }
+            },
+            {
+                "threshold": 1229,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_fishing"
+                }
+            },
+            {
+                "threshold": 1230,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_skinning"
+                }
+            },
+            {
+                "threshold": 1231,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_harvesting"
+                }
+            },
+            {
+                "threshold": 1232,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_herblore"
+                }
+            },
+            {
+                "threshold": 1233,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_quarrying"
+                }
+            },
+            {
+                "threshold": 1234,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_voidcalling"
+                }
+            },
+            {
+                "threshold": 1235,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_sneaking"
+                }
+            },
+            {
+                "threshold": 1236,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_perception"
+                }
+            },
+            {
+                "threshold": 1237,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_metabolism"
+                }
+            },
+            {
+                "threshold": 1238,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_total"
+                }
+            },
+            {
+                "threshold": 1239,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_repairing"
+                }
+            },
+            {
+                "threshold": 1240,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_contracting"
+                }
+            },
+            {
+                "threshold": 1241,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_weaponcraft"
+                }
+            },
+            {
+                "threshold": 1242,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_toolcraft"
+                }
+            },
+            {
+                "threshold": 1243,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_armorcraft"
+                }
+            },
+            {
+                "threshold": 1244,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_alchemy"
+                }
+            },
+            {
+                "threshold": 1245,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_fletching"
+                }
+            },
+            {
+                "threshold": 1246,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_scalecraft"
+                }
+            },
+            {
+                "threshold": 1247,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_spinning"
+                }
+            },
+            {
+                "threshold": 1248,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_tanning"
+                }
+            },
+            {
+                "threshold": 1249,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_masonry"
+                }
+            },
+            {
+                "threshold": 1250,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_blending"
+                }
+            },
+            {
+                "threshold": 1251,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_carpentry"
+                }
+            },
+            {
+                "threshold": 1252,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_smelting"
+                }
+            },
+            {
+                "threshold": 1253,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_crafting"
+                }
+            },
+            {
+                "threshold": 1254,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_production"
+                }
+            },
+            {
+                "threshold": 1255,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_processing"
+                }
+            },
+            {
+                "threshold": 1401,
+                "model": {
+                    "type": "model",
+                    "model": "item/exploded_mine"
+                }
+            },
+            {
+                "threshold": 1700,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_0"
+                }
+            },
+            {
+                "threshold": 1701,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_1"
+                }
+            },
+            {
+                "threshold": 1702,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_2"
+                }
+            },
+            {
+                "threshold": 1703,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_3"
+                }
+            },
+            {
+                "threshold": 1704,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_4"
+                }
+            },
+            {
+                "threshold": 1705,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_5"
+                }
+            },
+            {
+                "threshold": 1706,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_6"
+                }
+            },
+            {
+                "threshold": 1707,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_7"
+                }
+            },
+            {
+                "threshold": 1708,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_8"
+                }
+            },
+            {
+                "threshold": 1709,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_9"
+                }
+            },
+            {
+                "threshold": 1710,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_10"
+                }
+            },
+            {
+                "threshold": 1711,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_11"
+                }
+            },
+            {
+                "threshold": 1712,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_12"
+                }
+            },
+            {
+                "threshold": 1713,
+                "model": {
+                    "type": "model",
+                    "model": "item/cartridge_13"
+                }
+            }
+        ]
+    }
+}

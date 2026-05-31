@@ -1,6 +1,7 @@
 {
    "pack": {
-      "pack_format": 22,
+      "min_format": 75,
+      "max_format": 75,
       "description": "Etheria's Last Stand"
    }
 }
