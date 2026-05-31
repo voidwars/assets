@@ -20,6 +20,20 @@ File: `.github/workflows/packsquash.yml`
 | PR opened / new commits | PackSquash build → publish **`staging`** |
 | PR merged | PackSquash build → publish **`latest`** |
 | PR closed without merge | Nothing |
+| **Run workflow** (manual) | PackSquash build at chosen ref → publish **`latest`** or **`staging`** |
+
+### Manual production build
+
+**Actions → Build resource pack → Run workflow**, or:
+
+```powershell
+gh workflow run packsquash.yml --ref main -f ref=<commit-sha> -f channel=latest
+```
+
+- **`ref`** — branch, tag, or full commit SHA to build
+- **`channel`** — `latest` (production) or `staging`
+
+The workflow file must exist on the branch you pass to `--ref` (usually `main`).
 
 PackSquash config:
 

@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+	{"predicate":{"custom_model_data":1501}, "model": "item/coarse_padded_leggings"},
+	{"predicate":{"custom_model_data":1502}, "model": "item/rugged_padded_leggings"},
+	{"predicate":{"custom_model_data":1503}, "model": "item/steeled_padded_leggings"},
+	{"predicate":{"custom_model_data":1504}, "model": "item/mighty_padded_leggings"},
+	{"predicate":{"custom_model_data":1505}, "model": "item/robust_padded_leggings"},
+	{"predicate":{"custom_model_data":1506}, "model": "item/reinforced_padded_leggings"},
+	{"predicate":{"custom_model_data":1507}, "model": "item/flint_chainmail_leggings"},
+	{"predicate":{"custom_model_data":1508}, "model": "item/copper_chainmail_leggings"},
+	{"predicate":{"custom_model_data":1509}, "model": "item/iron_chainmail_leggings"},
+	{"predicate":{"custom_model_data":1510}, "model": "item/gold_chainmail_leggings"},
+	{"predicate":{"custom_model_data":1511}, "model": "item/diamond_chainmail_leggings"},
+	{"predicate":{"custom_model_data":1512}, "model": "item/netherite_chainmail_leggings"},
+	{"predicate":{"custom_model_data":1513}, "model": "item/flint_platemail_leggings"},
+	{"predicate":{"custom_model_data":1514}, "model": "item/copper_platemail_leggings"},
+	{"predicate":{"custom_model_data":1515}, "model": "item/iron_platemail_leggings"},
+	{"predicate":{"custom_model_data":1516}, "model": "item/gold_platemail_leggings"},
+	{"predicate":{"custom_model_data":1517}, "model": "item/diamond_platemail_leggings"},
+	{"predicate":{"custom_model_data":1518}, "model": "item/netherite_platemail_leggings"}
+  ],
+  "textures": {
+    "layer0": "minecraft:item/chainmail_leggings"
+  }
+}
