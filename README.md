@@ -49,4 +49,6 @@ Pushing directly to `main` does not create a release. See [docs/ci-and-releases.
 | Environment | Velocity `RESOURCE_PACK_URL` |
 |-------------|------------------------------|
 | Staging | `https://github.com/voidwars/assets/releases/download/staging/pack.zip` |
-| Production | omit (defaults to `latest`) |
+| Production | `https://github.com/voidwars/assets/releases/download/latest/pack.zip` |
+
+These are **tag download URLs**. Whether the GitHub release is marked pre-release or full does not change the download path. CI keeps `staging` as pre-release and `latest` as a full production release for UI clarity only.
