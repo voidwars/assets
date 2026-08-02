@@ -37,6 +37,7 @@ Pushing directly to `main` does not create a release. See [docs/ci-and-releases.
 | Folder structure | [docs/structure.md](docs/structure.md) |
 | Custom model data (CMD) | [docs/custom-model-data.md](docs/custom-model-data.md) |
 | Adding an item or icon | [docs/adding-assets.md](docs/adding-assets.md) |
+| **Armor worn look + trims** | [docs/armor-and-trims.md](docs/armor-and-trims.md) |
 | Commits and PRs | [docs/contributing.md](docs/contributing.md) |
 | CI and releases | [docs/ci-and-releases.md](docs/ci-and-releases.md) |
 

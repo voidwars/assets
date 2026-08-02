@@ -37,7 +37,7 @@ New CMD IDs require a matching entry in voidwars-platform `VoidWarsModelData` â€
 | `chore` | Gitignore, bulk renames |
 | `docs` | README and `docs/` only |
 
-Scopes: `items`, `models`, `textures`, `gui`, `skills`, `containers`, `modelengine`, `lang`, `shaders`, `pack`
+Scopes: `items`, `models`, `textures`, `gui`, `skills`, `containers`, `modelengine`, `lang`, `shaders`, `armor`, `trims`, `pack`
 
 ```
 feat(gui): add stash control icons for mailbox, trash, and pagination

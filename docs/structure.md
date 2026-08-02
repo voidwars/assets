@@ -30,10 +30,14 @@ For MC Assets / Blockbench workflows, open `pack/assets/` (marked by `.mcassetsr
 | `textures/entity/` | Entity texture overrides |
 | `textures/trims/` | Custom armor trim palettes and models |
 | `textures/misc/` | Misc texture overrides |
-| `textures/models/armor/` | Armor layer textures |
-| `atlases/` | Sprite atlas configuration |
+| `textures/models/armor/` | **Legacy** armor layers (pre-1.21.2 paths; keep in sync with equipment/) |
+| `textures/entity/equipment/humanoid/` | **Worn** body armor textures (1.21.2+) |
+| `textures/entity/equipment/humanoid_leggings/` | **Worn** leg armor textures (1.21.2+) |
+| `atlases/` | Sprite atlas configuration (`armor_trims.json`, `blocks.json`) |
 | `lang/en_us.json` | Display names for custom trim materials and patterns |
-| `shaders/core/` | Core shader overrides (entity translucency) |
+| `shaders/core/` | Core shader overrides (entity translucency / player parts) |
+
+Worn armor + trims: [armor-and-trims.md](armor-and-trims.md).
 
 ## `pack/assets/modelengine/`
 

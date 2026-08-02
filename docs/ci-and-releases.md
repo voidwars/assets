@@ -55,5 +55,7 @@ Set all three fields when bumping versions. PackSquash requires `pack_format`; M
 | Symptom | Likely cause |
 |---------|--------------|
 | PackSquash parse error | Invalid JSON under `pack/` |
-| Missing texture | Model references a PNG that does not exist |
+| Missing texture (item icon) | Model references a PNG that does not exist under `textures/item/` |
+| Purple/black **worn** armor, icons OK | Equipment textures still on legacy paths — see [armor-and-trims.md](armor-and-trims.md) |
+| Staging pack good, prod bad | `latest` release not rebuilt (merge the PR; do not rely on direct `main` push) |
 | Release step fails | Repo **Settings → Actions → General → Workflow permissions** must allow read/write |
