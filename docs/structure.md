@@ -28,7 +28,10 @@ For MC Assets / Blockbench workflows, open `pack/assets/` (marked by `.mcassetsr
 | `textures/item/` | Item and GUI icon PNGs |
 | `textures/gui/` | HUD and GUI sprites |
 | `textures/entity/` | Entity texture overrides |
-| `textures/trims/` | Custom armor trim palettes and models |
+| `textures/trims/entity/humanoid/` | Worn trim patterns (body) — **1.21.2+ required path** |
+| `textures/trims/entity/humanoid_leggings/` | Worn trim patterns (legs) |
+| `textures/trims/color_palettes/` | Trim material color ramps |
+| `textures/trims/models/armor/` | Legacy trim path (unused by 1.21.11 client; keep in sync or delete later) |
 | `textures/misc/` | Misc texture overrides |
 | `textures/models/armor/` | **Legacy** armor layers (pre-1.21.2 paths; keep in sync with equipment/) |
 | `textures/entity/equipment/humanoid/` | **Worn** body armor textures (1.21.2+) |

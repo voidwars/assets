@@ -1,101 +1,97 @@
-# Armor and trims
+# Armor and trims (worn look)
 
-Voidwars armor uses **two independent client channels**:
+## What you are looking at on an armor stand
 
-| Channel | What you see | Driven by |
-|---------|--------------|-----------|
-| **Item icon** | Inventory / hotbar / ground | `items/chainmail_*.json` CMD → Blockbench models under `models/item/*_padded_*` / `*_chainmail_*` / etc. |
-| **Worn model** | On players, mobs, armor stands | Vanilla equipment layers + **armor trim** (pattern × material) |
+Voidwars loot armor is **`CHAINMAIL_*` items with an armor trim component**, not a separate custom mesh when worn.
 
-Icons can look perfect while worn armor is purple/black — that is expected if only the item pipeline is healthy.
+| Layer | Source | What it looks like |
+|-------|--------|--------------------|
+| **Inventory icon** | CMD → Blockbench model (`items/chainmail_*.json`) | Custom 2D/3D icon (this was working) |
+| **Worn base** | Equipment texture `chainmail` | Thin vanilla chain silhouette |
+| **Worn “armor style”** | **Trim pattern × material** (padded / chainmail / platemail + coarse…netherite) | Almost all of the visible worn look |
 
-## How the game builds worn armor (server)
+So purple/black **on armor stands / players / mobs** with good icons is almost always a **worn-layer / trim-atlas** problem, not CMD.
 
-Paper applies a trim in `ArmorStats.trimArmor` via `ArmorConsts`:
+## 1.21.2+ path rules (pack format 75 / MC 1.21.11)
 
-| Armor type | Trim **pattern** (datapack id) | Tier colors via trim **material** |
-|------------|--------------------------------|-------------------------------------|
-| LIGHT | `padded` | `coarse` … `reinforced` (custom) |
-| MEDIUM | `chainmail` | `flint` + vanilla copper/iron/gold/diamond/netherite |
-| HEAVY | `platemail` | same metal materials as medium |
+### Equipment (base chainmail / leather)
 
-Registry keys live in platform `VoidWarsDatapack` (`minecraft:padded`, `minecraft:coarse`, …). Those keys must exist in the **server datapack** *and* in the resource pack atlas / textures.
-
-## Pack layout (1.21.2+ / pack format 75)
-
-### Worn base armor textures (equipment)
-
-Since **1.21.2**, equipment textures live under `textures/entity/equipment/`, **not** only under the legacy `textures/models/armor/` path.
-
-| Legacy (pre-1.21.2) | Current (required for 1.21.11 worn look) |
-|---------------------|------------------------------------------|
-| `textures/models/armor/<mat>_layer_1.png` | `textures/entity/equipment/humanoid/<mat>.png` |
-| `textures/models/armor/<mat>_layer_2.png` | `textures/entity/equipment/humanoid_leggings/<mat>.png` |
-| `leather_layer_1_overlay.png` | `humanoid/leather_overlay.png` |
-| `leather_layer_2_overlay.png` | `humanoid_leggings/leather_overlay.png` |
-
-This pack ships **both**: legacy copies remain for tooling/reference; the **equipment** copies are what the 1.21.11 client uses when rendering worn leather/chainmail.
-
-Materials we override today: `leather`, `chainmail`.
-
-### Armor trims
-
-| Path | Role |
+| Role | Path |
 |------|------|
-| `textures/trims/models/armor/<pattern>.png` | Pattern masks (body) |
-| `textures/trims/models/armor/<pattern>_leggings.png` | Pattern masks (legs) |
-| `textures/trims/color_palettes/<material>.png` | Color ramps for custom materials |
-| `atlases/armor_trims.json` | `paletted_permutations` — wires patterns × materials into the trim atlas |
-| `lang/en_us.json` | Display names for custom patterns/materials |
+| Body | `textures/entity/equipment/humanoid/<material>.png` |
+| Legs | `textures/entity/equipment/humanoid_leggings/<material>.png` |
+| Leather overlay | `…/leather_overlay.png` in each of the above dirs |
 
-Custom patterns present: `padded`, `chainmail`, `platemail`.  
-Custom materials present: `coarse`, `rugged`, `steeled`, `mighty`, `robust`, `reinforced`, `flint` (+ overrides for some vanilla palettes like `gold` / `netherite`).
+Legacy `textures/models/armor/*_layer_*` is ignored for worn rendering.
 
-Vanilla patterns (coast, sentry, …) are still listed in the atlas so vanilla trims keep working; textures resolve from the default assets unless overridden.
+### Trim patterns (this is the stand-critical path)
 
-### Inventory icons (not worn)
+Vanilla moved trims off `trims/models/armor/`:
 
-CMD hosts `chainmail_helmet|chestplate|leggings|boots` → models like `item/coarse_padded_chestplate`. Documented in [custom-model-data.md](custom-model-data.md) (1501–1518 band).
+| Role | Path |
+|------|------|
+| Body pattern | `textures/trims/entity/humanoid/<pattern>.png` |
+| Legs pattern | `textures/trims/entity/humanoid_leggings/<pattern>.png` |
 
-## Symptom: purple / black worn armor
+**Note:** leggings file is named `<pattern>.png` inside the leggings folder (not `<pattern>_leggings.png`).
 
-Minecraft missing-texture colors (magenta + black). Typical Voidwars cases:
+`atlases/armor_trims.json` must list those same paths (plus palettes). Providing this file **replaces** the vanilla atlas, so it must include vanilla patterns too or those also break.
 
-| Observation | Likely cause |
-|-------------|--------------|
-| Icons OK, worn armor purple/black on players **and** mobs | Equipment textures missing or still only on legacy `models/armor` paths |
-| Only trims wrong; base armor OK | `atlases/armor_trims.json` / pattern PNG / palette PNG mismatch |
-| Only custom patterns wrong | Missing `trims/models/armor/padded.png` (etc.) or not listed in atlas |
-| Only custom materials wrong | Missing `trims/color_palettes/<id>.png` or not listed under `permutations` |
-| Unarmored player skin wrong | Separate issue — `shaders/core/rendertype_entity_translucent*` (dismemberment), not armor |
-| Staging OK, prod wrong | Stale `latest` release — see [ci-and-releases.md](ci-and-releases.md) |
+Custom Voidwars patterns: `padded`, `chainmail`, `platemail`.  
+Custom materials (palettes): `coarse`, `rugged`, `steeled`, `mighty`, `robust`, `reinforced`, `flint`.
 
-## Local verification checklist
+### Server mapping (platform)
 
-1. Load **only** this pack (or server pack) on Minecraft **1.21.11**.
-2. Wear vanilla leather + chainmail — base layers must not be purple.
-3. Wear Voidwars loot armor (or apply trims via smithing/debug) for `padded` / `chainmail` / `platemail` × a custom material.
-4. Confirm inventory icon still matches CMD model.
-5. Check third-person + another entity (zombie in armor / armor stand).
+`ArmorConsts` + `ArmorStats.trimArmor`:
 
-## Staging → production (assets only)
+| Armor type | Pattern id | Materials by tier |
+|------------|------------|-------------------|
+| LIGHT | `padded` | coarse → reinforced |
+| MEDIUM | `chainmail` | flint + copper…netherite |
+| HEAVY | `platemail` | flint + copper…netherite |
+
+Datapack `custom_trims` registers those ids (dev worlds under `paper-server/run/**/datapacks/custom_trims`).
+
+## Local test (no PR required)
+
+1. In assets repo, use the **working tree** under `pack/` (not an old zip).
+2. Minecraft **1.21.11** → Options → Resource Packs → Open Pack Folder.
+3. Either:
+   - Symlink/copy the whole `pack/` folder into resourcepacks and enable it, **or**
+   - Zip only the contents of `pack/` (`pack.mcmeta` at zip root).
+4. **Disable every other pack** for the first test.
+5. Creative world, no server needed for base check:
+   - Put vanilla chainmail on an armor stand → must look normal (proves equipment base).
+   - Put a VW chainmail piece with trim (from server or `/item` with trim components if you know them) on a stand → must show patterned armor, not magenta/black.
+6. Fully quit client between pack edits (F3+T is not always enough after atlas changes).
+
+### Isolating layers
+
+| Test | Expected if pack is healthy |
+|------|-----------------------------|
+| Vanilla iron armor on stand | Normal iron (no pack dependency) |
+| Vanilla chainmail on stand | Normal chain; if purple → equipment override broken |
+| VW armor on stand | Patterned look; if purple → trim atlas/paths broken |
+| VW armor in hotbar only | Custom icon; if good while stand is purple → icons OK, worn broken |
+
+## Staging → production
 
 Same as [contributing.md](contributing.md) / [ci-and-releases.md](ci-and-releases.md):
 
-1. Branch from `main`, edit under `pack/` only.
-2. Open PR → CI publishes **`staging`** pack.zip.
-3. Staging Velocity already points at `…/releases/download/staging/pack.zip` — reconnect after hash refresh (~30s), or fully quit the client to drop cache.
-4. QA worn armor + icons on **staging** (`:25566`).
-5. Merge PR → CI publishes **`latest`**.
-6. Production Velocity uses `…/latest/pack.zip` — no deployments change required for pack-only fixes; wait for proxy hash update, then rejoin prod.
+1. Local pack test green.
+2. PR → CI `staging` release.
+3. Staging server (Velocity already on `staging/pack.zip`) → rejoin after hash refresh.
+4. Merge → `latest` for prod.
 
-## Related code (not in this repo)
+## Related files in this pack
 
-| Repo | File | Role |
-|------|------|------|
-| platform / platform-staging | `game/ArmorConsts.java` | Pattern + material per tier/type |
-| platform / platform-staging | `game/VoidWarsDatapack.java` | Registry lookups for custom trims |
-| platform / platform-staging | `tags/combat/ArmorStats.java` | Applies trim on item create |
-| platform / platform-staging | `VoidWarsModelData` + chainmail hosts | Inventory CMD icons |
+| Path | Purpose |
+|------|---------|
+| `atlases/armor_trims.json` | Trim atlas (must use `trims/entity/…` paths) |
+| `textures/trims/entity/humanoid/` | Custom + (via vanilla) pattern body |
+| `textures/trims/entity/humanoid_leggings/` | Pattern legs |
+| `textures/trims/color_palettes/` | Material colors |
+| `textures/entity/equipment/…` | Worn base armor |
+| `items/chainmail_*.json` | Inventory CMD only |
 
-Pack PRs do **not** need a platform PR unless you add new pattern/material **ids** (then datapack + `VoidWarsDatapack` + atlas + textures must land together).
+Do **not** reintroduce a custom `atlases/blocks.json` unless it is a full superset of vanilla — a minimal override wipes the entire blocks atlas.
