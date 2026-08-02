@@ -1,15 +1,32 @@
 # Contributing
 
-## Workflow
+## Workflow (mandatory)
 
-| Step | What you do | Release |
+```
+local → PR → staging channel → QA on staging server → merge → latest (production)
+```
+
+| Step | What you do | Channel |
 |------|-------------|---------|
-| 1 | Branch from `main` (`feat/my-icons`) | — |
-| 2 | Edit under `pack/` — see [adding-assets.md](adding-assets.md) | — |
-| 3 | Test locally in Minecraft **1.21.11** | — |
-| 4 | Open PR (CI must pass) | **`staging`** |
-| 5 | QA on staging server | — |
-| 6 | Merge PR | **`latest`** (production) |
+| 1 | Branch from `main` | — |
+| 2 | Edit under `pack/` (see [adding-assets.md](adding-assets.md)) | — |
+| 3 | Test **locally** in Minecraft **1.21.11** | — |
+| 4 | Open PR; CI must pass | Publishes **`staging`** (if `pack/**` changed) |
+| 5 | QA on **staging server** (not prod) | Still `staging` only |
+| 6 | Merge PR **after** staging QA | Publishes **`latest`** → production |
+
+Details, hard rules, and “prod looks like staging” debugging: [ci-and-releases.md](ci-and-releases.md).
+
+### Hotfixes
+
+Same steps. Local + staging QA are still required. There is no emergency path that writes `latest` without a merge.
+
+### Do not
+
+- Merge a pack PR that has not been seen on the staging server.
+- Point production Velocity at the `staging` release URL.
+- Open multiple competing pack PRs when both need staging QA (`staging` tag is singular).
+- Push pack changes straight to `main` (no release is created; and it bypasses review).
 
 New CMD IDs require a matching entry in voidwars-platform `VoidWarsModelData` — link both PRs.
 
@@ -17,8 +34,8 @@ New CMD IDs require a matching entry in voidwars-platform `VoidWarsModelData` �
 
 - One asset batch per PR when possible.
 - Include before/after screenshots for visual changes.
-- Use the PR template checklist.
-- Do not push asset changes directly to `main`.
+- Use the PR template checklist end-to-end.
+- Prefer **one open pack PR** at a time for staging-server QA.
 
 ## Commit messages
 
@@ -52,8 +69,9 @@ build(pack): bump pack format to 75 for 1.21.11
 | New item icon | platform `VoidWarsModelData` + item entry + model + texture |
 | GUI icon | model + texture + host item entry |
 | Format migration | all JSON moved for that host item |
+| Worn armor / trims | atlas + `trims/entity/…` textures (see [armor-and-trims.md](armor-and-trims.md)) |
 
-Edit **`pack/`** only — nothing outside it is built or released.
+Edit **`pack/`** for anything that ships in the zip. Docs under `docs/` do not republish channels by themselves.
 
 ## JSON rules
 

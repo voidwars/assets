@@ -76,12 +76,14 @@ Datapack `custom_trims` registers those ids (dev worlds under `paper-server/run/
 
 ## Staging → production
 
-Same as [contributing.md](contributing.md) / [ci-and-releases.md](ci-and-releases.md):
+**Same gates as every pack change** — see [ci-and-releases.md](ci-and-releases.md). Summary:
 
-1. Local pack test green.
-2. PR → CI `staging` release.
-3. Staging server (Velocity already on `staging/pack.zip`) → rejoin after hash refresh.
-4. Merge → `latest` for prod.
+1. Local pack test green (this page’s isolation table).
+2. PR with `pack/**` → CI rewrites **`staging`** only.
+3. QA on **staging** server (`…/staging/pack.zip`). Production must still serve `…/latest/pack.zip` until you merge.
+4. Merge → CI rewrites **`latest`**. Prod Velocity picks up the new hash; no URL swap.
+
+If armor looks fixed on “prod” while this PR is still open, you are almost certainly on staging or a cached client zip — check Velocity `Resource pack URL` lines.
 
 ## Related files in this pack
 
