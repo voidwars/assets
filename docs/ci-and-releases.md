@@ -31,13 +31,16 @@ zip_spec_conformance_level = 'disregard'
 
 ## Velocity proxies
 
-Production uses `latest` by default. Staging must set:
+Deployments set `resourcePackUrl` per env (injected as `RESOURCE_PACK_URL`):
 
 ```
+# staging
 RESOURCE_PACK_URL=https://github.com/voidwars/assets/releases/download/staging/pack.zip
+# production
+RESOURCE_PACK_URL=https://github.com/voidwars/assets/releases/download/latest/pack.zip
 ```
 
-The proxy polls the URL every ~30 seconds and pushes the pack when the SHA-1 hash changes.
+These are fixed **tag** download URLs, not `GET /repos/.../releases/latest`. A pre-release still downloads at `/releases/download/<tag>/pack.zip`. The proxy polls every ~30s, SHA-1s the zip, and offers the pack to players when the hash is new (not on every hub↔raid hop).
 
 ## Pack format
 
