@@ -53,6 +53,8 @@ Host ↔ range mapping: [custom-model-data.md](custom-model-data.md).
 | GUI icon | `models/item/gui_<name>.json` | `textures/item/gui_<name>.png` | `paper.json` (1400 band) |
 | Skill icon | `models/item/skill_<name>.json` | `textures/item/skill_<name>.png` | `brick.json` (1201–1255) |
 | Cartridge | `models/item/cartridge_<n>.json` | `textures/item/cartridge_<n>.png` | `brick.json` (1700–1713) |
+| Armor **icon** | `models/item/<tier>_<set>_*.json` | `textures/item/…` | `chainmail_*.json` (1501–1518) |
+| Armor **worn** + trims | (trim atlas, not CMD) | `textures/entity/equipment/…` + `textures/trims/…` | see [armor-and-trims.md](armor-and-trims.md) |
 | ModelEngine mob | `modelengine/models/<id>/` | `modelengine/textures/entity/<id>.png` | server-side ModelEngine config |
 
 ## PR checklist

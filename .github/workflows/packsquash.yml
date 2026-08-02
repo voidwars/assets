@@ -1,11 +1,27 @@
 name: Build resource pack
 
+# Intended product train (do not bypass):
+#   PR open/update (pack changes) → overwrite GitHub release tag "staging"
+#   PR merge to main               → overwrite GitHub release tag "latest" (production)
+#
+# Docs-only PRs do not publish either channel (paths filter).
+# Never point production Velocity at the staging URL.
+
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
+    paths:
+      - "pack/**"
+      - ".github/workflows/packsquash.yml"
 
 permissions:
   contents: write
+
+# Staging tag is singular: only one pack PR should be in flight for QA.
+# Cancel superseded staging builds for the same PR; production is per-merge.
+concurrency:
+  group: assets-pack-${{ github.event.pull_request.number }}-${{ github.event.action == 'closed' && 'prod' || 'staging' }}
+  cancel-in-progress: ${{ github.event.action != 'closed' }}
 
 jobs:
   staging:
@@ -40,6 +56,8 @@ jobs:
 
   production:
     name: Build and publish production
+    # Only on an actual merge. Closed-without-merge does nothing.
+    # paths filter already excludes docs-only PRs from this workflow.
     if: github.event.action == 'closed' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
