@@ -1,11 +1,9 @@
 name: Build resource pack
 
-# Intended product train (do not bypass):
-#   PR open/update (pack changes) → overwrite GitHub release tag "staging"
-#   PR merge to main               → overwrite GitHub release tag "latest" (production)
-#
-# Docs-only PRs do not publish either channel (paths filter).
-# Never point production Velocity at the staging URL.
+# PR touching pack/** → GitHub release tag pack-pr-<N>
+# Merge to main       → rewrite tag "staging" (integration)
+# Production          → Promote pack workflow (tag latest)
+# See voidwars-k8s docs/DELIVERY.md
 
 on:
   pull_request:
@@ -17,15 +15,13 @@ on:
 permissions:
   contents: write
 
-# Staging tag is singular: only one pack PR should be in flight for QA.
-# Cancel superseded staging builds for the same PR; production is per-merge.
 concurrency:
-  group: assets-pack-${{ github.event.pull_request.number }}-${{ github.event.action == 'closed' && 'prod' || 'staging' }}
+  group: assets-pack-${{ github.event.pull_request.number }}-${{ github.event.action == 'closed' && 'merge' || 'pr' }}
   cancel-in-progress: ${{ github.event.action != 'closed' }}
 
 jobs:
-  staging:
-    name: Build and publish staging
+  pr-pack:
+    name: Publish pack-pr tag
     if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     steps:
@@ -44,20 +40,18 @@ jobs:
             output_file_path = '${{ runner.temp }}/pack.zip'
             zip_spec_conformance_level = 'disregard'
 
-      - name: Publish staging release
+      - name: Publish pack-pr-${{ github.event.pull_request.number }}
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: staging
+          automatic_release_tag: pack-pr-${{ github.event.pull_request.number }}
           prerelease: true
-          title: "Staging — PR #${{ github.event.pull_request.number }}"
+          title: "PR #${{ github.event.pull_request.number }} pack"
           files: |
             ${{ runner.temp }}/pack.zip
 
-  production:
-    name: Build and publish production
-    # Only on an actual merge. Closed-without-merge does nothing.
-    # paths filter already excludes docs-only PRs from this workflow.
+  staging:
+    name: Publish staging pack on merge
     if: github.event.action == 'closed' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
@@ -76,12 +70,12 @@ jobs:
             output_file_path = '${{ runner.temp }}/pack.zip'
             zip_spec_conformance_level = 'disregard'
 
-      - name: Publish production release
+      - name: Publish staging release
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest
-          prerelease: false
-          title: "Production — PR #${{ github.event.pull_request.number }}"
+          automatic_release_tag: staging
+          prerelease: true
+          title: "Staging — merge PR #${{ github.event.pull_request.number }}"
           files: |
             ${{ runner.temp }}/pack.zip
