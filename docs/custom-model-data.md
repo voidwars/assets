@@ -12,8 +12,9 @@ When adding a new icon, allocate the ID in that enum first, then wire the same t
 
 | Range | Category | Examples |
 |-------|----------|----------|
-| 1–12 | Bow / crossbow classes | `BOW_CLASS_1` … `CROSSBOW_CLASS_6` |
-| 101–166 | Melee weapons and wands | swords, daggers, maces, spears, hammers, wands |
+| 1–12 | Bow / crossbow classes | birch → oak → spruce → dark oak → warped → crimson |
+| 80–85 | Wands / resonators | `flint_resonator` … `netherite_resonator` (blaze_rod host) |
+| 101–166 | Melee weapons | swords, daggers, maces, spears, hammers, battleaxes |
 | 201–266 | Tools | pickaxes, quarry hammers, sickles, lumber axes, secateurs, harpoons, skinning knives |
 | 301–306 | Currency | copper through netherite coins, contract points |
 | 401–421 | Health items | bandages, medkits, splints |
@@ -25,11 +26,14 @@ When adding a new icon, allocate the ID in that enum first, then wire the same t
 | 1001–1066 | Processed gatherables | ingots, cloth, leather, bricks, blends, scales |
 | 1101–1107 | Essences | fire, ice, air, earth, lightning, light, dark |
 | 1201–1255 | Skill icons | `skill_*` |
-| 1301 | Streamer / misc | `MF_HELMET` |
+| 1301–1303 | Streamer / misc | `MF_HELMET`, `wanted_poster`, `distinguished_quartz` |
 | 1401–1406 | UI elements | exploded mine, searching icon, pagination, mailbox, trash |
 | 1501–1518 | Armor tier icons | light / medium / heavy × 6 tiers |
 | 1601–1612 | Contract task heads | blaze, bosses, mob heads |
 | 1700–1713 | Cartridges / secure containers | `cartridge_0` … `cartridge_13` (brick host) |
+| 2001–2006 | Wand shards (ammo) | `stone_shard` … `blackstone_shard` (brick host) |
+| 2011–2016 | Arrows | `flint_arrow` … `netherite_arrow` (arrow host) |
+| 2021–2026 | Bolts | `flintfin_bolt` … `obsidian_bolt` (arrow host) |
 
 Gaps in numbering (e.g. 622, 722) are intentional spares or reserved slots — follow existing patterns in `VoidWarsModelData` rather than inventing new numbers.
 
@@ -39,9 +43,11 @@ Each host item JSON centralises CMD dispatch for one vanilla material:
 
 | Host (`items/<file>.json`) | CMD ranges handled |
 |----------------------------|-------------------|
-| `stick.json` | 101–166 (weapons/tools on stick) |
+| `stick.json` | 101–166 weapons, 201–266 tools |
+| `blaze_rod.json` | 80–85 (wands / resonators) |
 | `bow.json` | 1–6 (with pull-state composites) |
 | `crossbow.json` | 7–12 (with charge/firework composites) |
+| `arrow.json` | 2011–2016 arrows, 2021–2026 bolts |
 | `trident.json` | 113–118 (tiered spears — legacy tier display) |
 | `gold_nugget.json` | 301–306 |
 | `golden_apple.json` | 401–402, 411, 421 |
@@ -49,14 +55,16 @@ Each host item JSON centralises CMD dispatch for one vanilla material:
 | `paper.json` | 601–625, 1403–1406 |
 | `item_frame.json` | 701–724 |
 | `raw_iron.json` | 801–866 |
-| `brick.json` | 901–966, 1001–1066, 1101–1107, 1201–1255, 1401, 1700–1713 |
+| `brick.json` | 901–966, 1001–1066, 1101–1107, 1201–1255, 1303, 1401, 1700–1713, 2001–2006 |
 | `chainmail_helmet.json` | 1501–1518 |
 | `chainmail_chestplate.json` | 1501–1518 |
 | `chainmail_leggings.json` | 1501–1518 |
 | `chainmail_boots.json` | 1501–1518 |
-| `netherite_pickaxe.json` | 304, 1301, 1402, 1601–1612 |
+| `netherite_pickaxe.json` | 304, 1301–1302, 1402, 1601–1612 |
 | `player_head.json` | 1–8 (custom player body part models) |
 | `leather_horse_armor.json` | low IDs for ModelEngine mob previews |
+
+**Wood tier order** (bow 1–6, crossbow 7–12, stumps 821–826, logs 921–926, planks 1021–1026): birch → oak → spruce → dark oak → warped → crimson. Jungle is not used.
 
 All armor slot host files share the same 1501–1518 mapping — the server picks the host material matching the armor piece being shown.
 

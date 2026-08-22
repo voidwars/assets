@@ -1,0 +1,42 @@
+{
+  "eminence_toll": {
+    "subtitle": "subtitles.voidwars.eminence_toll",
+    "sounds": [
+      {
+        "name": "voidwars:music/eminence_toll",
+        "stream": true
+      }
+    ],
+    "category": "record"
+  },
+  "full_circles": {
+    "subtitle": "subtitles.voidwars.full_circles",
+    "sounds": [
+      {
+        "name": "voidwars:music/full_circles",
+        "stream": true
+      }
+    ],
+    "category": "record"
+  },
+  "song_from_silence": {
+    "subtitle": "subtitles.voidwars.song_from_silence",
+    "sounds": [
+      {
+        "name": "voidwars:music/song_from_silence",
+        "stream": true
+      }
+    ],
+    "category": "record"
+  },
+  "piano_battle": {
+    "subtitle": "subtitles.voidwars.piano_battle",
+    "sounds": [
+      {
+        "name": "voidwars:music/piano_battle",
+        "stream": true
+      }
+    ],
+    "category": "record"
+  }
+}
