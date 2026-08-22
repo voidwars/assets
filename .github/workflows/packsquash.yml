@@ -1,64 +1,34 @@
 name: Build resource pack
 
-# PR touching pack/** → GitHub release tag pack-pr-<N>
-# Merge to main       → rewrite tag "staging" (integration)
-# Production          → Promote pack workflow (tag latest)
-# See voidwars-k8s docs/DELIVERY.md
+# Push/merge to main (pack/**) → GitHub release tag "staging"
+# Prod → Actions → Promote pack to prod (tag latest)
+# No per-PR zip. Staging and code previews both use the staging URL.
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
+  push:
+    branches:
+      - main
     paths:
       - "pack/**"
       - ".github/workflows/packsquash.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: assets-pack-${{ github.event.pull_request.number }}-${{ github.event.action == 'closed' && 'merge' || 'pr' }}
-  cancel-in-progress: ${{ github.event.action != 'closed' }}
+  group: assets-pack-staging
+  cancel-in-progress: true
 
 jobs:
-  pr-pack:
-    name: Publish pack-pr tag
-    if: github.event.action != 'closed'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone PR branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
-
-      - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest
-          options: |
-            pack_directory = 'pack'
-            output_file_path = '${{ runner.temp }}/pack.zip'
-            zip_spec_conformance_level = 'disregard'
-
-      - name: Publish pack-pr-${{ github.event.pull_request.number }}
-        uses: marvinpinto/action-automatic-releases@v1.2.1
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: pack-pr-${{ github.event.pull_request.number }}
-          prerelease: true
-          title: "PR #${{ github.event.pull_request.number }} pack"
-          files: |
-            ${{ runner.temp }}/pack.zip
-
   staging:
-    name: Publish staging pack on merge
-    if: github.event.action == 'closed' && github.event.pull_request.merged == true
+    name: Publish staging pack
     runs-on: ubuntu-latest
     steps:
-      - name: Clone merge commit
+      - name: Clone main
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          ref: main
           fetch-depth: 0
 
       - name: Run PackSquash
@@ -76,6 +46,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: staging
           prerelease: true
-          title: "Staging — merge PR #${{ github.event.pull_request.number }}"
+          title: "Staging — ${{ github.sha }}"
           files: |
             ${{ runner.temp }}/pack.zip

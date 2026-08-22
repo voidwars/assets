@@ -1,29 +1,27 @@
 # CI and releases
 
-One git branch (`main`). Three pack objects (GitHub release **tags**). Velocity pins each lane to one URL.
+One branch (`main`). Two tags. Staging and every game preview share the same zip.
 
 ```
-local test → PR (pack/**) → pack-pr-<N>
-           → merge → staging tag → QA on :25566
-           → Promote pack → latest tag → prod :25565
+edit pack/ → merge (or push) to main → tag staging → :25566 and code previews
+           → Promote pack → tag latest → :25565
 ```
 
-Code previews (`play.skyfire.network:26200+PR`) use the **staging** pack by default so a Java PR does not pick up an unfinished model. `pack-pr-<N>` is for downloading or later wiring.
+No per-PR pack build. Nothing in the cluster reads `pack-pr-*`.
 
 ## Channels
 
 | Channel | Tag | URL | When it updates |
 |---------|-----|-----|-----------------|
-| PR | `pack-pr-<N>` | `…/releases/download/pack-pr-<N>/pack.zip` | PR open/push touching `pack/**` |
-| Staging | `staging` | `…/releases/download/staging/pack.zip` | PR **merged** to `main` |
-| Production | `latest` | `…/releases/download/latest/pack.zip` | **Promote pack** workflow only |
+| Staging + previews | `staging` | `…/releases/download/staging/pack.zip` | Push/merge to `main` touching `pack/**` |
+| Production | `latest` | `…/releases/download/latest/pack.zip` | **Promote pack** only |
 
 ## Hard rules
 
-1. Prod Velocity uses the `latest` URL only. Staging and code previews use `staging`.
-2. Merge does **not** publish prod. Operators: Actions → **Promote pack to prod** → type `promote`.
-3. CI green ≠ in-game QA. Play `:25566` before promoting.
-4. Docs-only PRs skip the workflow (`paths` filter).
+1. Prod Velocity uses `latest` only. Staging and code previews use `staging`.
+2. Merge does **not** publish prod. Actions → **Promote pack to prod** → type `promote`.
+3. Play `:25566` before promoting.
+4. Docs-only changes skip the pack job (`paths` filter).
 
 ## Velocity wiring
 

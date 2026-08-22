@@ -1,34 +1,26 @@
 # Contributing
 
-## Workflow (mandatory)
+## Workflow
 
 ```
-local → PR → staging channel → QA on staging server → merge → latest (production)
+local → merge/push to main → staging zip on :25566 (and game previews) → Promote pack → prod
 ```
 
 | Step | What you do | Channel |
 |------|-------------|---------|
-| 1 | Branch from `main` | — |
-| 2 | Edit under `pack/` (see [adding-assets.md](adding-assets.md)) | — |
-| 3 | Test **locally** in Minecraft **1.21.11** | — |
-| 4 | Open PR; CI must pass | Publishes **`staging`** (if `pack/**` changed) |
-| 5 | QA on **staging server** (not prod) | Still `staging` only |
-| 6 | Merge PR **after** staging QA | Publishes **`latest`** → production |
+| 1 | Edit under `pack/` (see [adding-assets.md](adding-assets.md)) | — |
+| 2 | Test **locally** in Minecraft **1.21.11** | — |
+| 3 | Merge or push to `main` | Rewrites **`staging`**. Join `:25566`. Game previews use this zip too. |
+| 4 | When prod should match | Actions → **Promote pack to prod** → type `promote` → **`latest`** |
 
-Details, hard rules, and “prod looks like staging” debugging: [ci-and-releases.md](ci-and-releases.md).
-
-### Hotfixes
-
-Same steps. Local + staging QA are still required. There is no emergency path that writes `latest` without a merge.
+Details: [ci-and-releases.md](ci-and-releases.md).
 
 ### Do not
 
-- Merge a pack PR that has not been seen on the staging server.
 - Point production Velocity at the `staging` release URL.
-- Open multiple competing pack PRs when both need staging QA (`staging` tag is singular).
-- Push pack changes straight to `main` (no release is created; and it bypasses review).
+- Expect merge to update prod. Only Promote writes `latest`.
 
-New CMD IDs require a matching entry in voidwars-platform `VoidWarsModelData` — link both PRs.
+New CMD IDs require a matching entry in voidwars-platform `VoidWarsModelData`.
 
 ## Pull requests
 
