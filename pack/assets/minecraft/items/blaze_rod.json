@@ -1,0 +1,55 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/blaze_rod"
+        },
+        "entries": [
+            {
+                "threshold": 161,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_resonator"
+                }
+            },
+            {
+                "threshold": 162,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_resonator"
+                }
+            },
+            {
+                "threshold": 163,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_resonator"
+                }
+            },
+            {
+                "threshold": 164,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_resonator"
+                }
+            },
+            {
+                "threshold": 165,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_resonator"
+                }
+            },
+            {
+                "threshold": 166,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_resonator"
+                }
+            }
+        ]
+    }
+}

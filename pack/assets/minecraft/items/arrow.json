@@ -1,0 +1,97 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/arrow"
+        },
+        "entries": [
+            {
+                "threshold": 2011,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_arrow"
+                }
+            },
+            {
+                "threshold": 2012,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_arrow"
+                }
+            },
+            {
+                "threshold": 2013,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_arrow"
+                }
+            },
+            {
+                "threshold": 2014,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_arrow"
+                }
+            },
+            {
+                "threshold": 2015,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_arrow"
+                }
+            },
+            {
+                "threshold": 2016,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_arrow"
+                }
+            },
+            {
+                "threshold": 2021,
+                "model": {
+                    "type": "model",
+                    "model": "item/flintfin_bolt"
+                }
+            },
+            {
+                "threshold": 2022,
+                "model": {
+                    "type": "model",
+                    "model": "item/koi_bolt"
+                }
+            },
+            {
+                "threshold": 2023,
+                "model": {
+                    "type": "model",
+                    "model": "item/steelhead_bolt"
+                }
+            },
+            {
+                "threshold": 2024,
+                "model": {
+                    "type": "model",
+                    "model": "item/gar_bolt"
+                }
+            },
+            {
+                "threshold": 2025,
+                "model": {
+                    "type": "model",
+                    "model": "item/emerald_bolt"
+                }
+            },
+            {
+                "threshold": 2026,
+                "model": {
+                    "type": "model",
+                    "model": "item/obsidian_bolt"
+                }
+            }
+        ]
+    }
+}

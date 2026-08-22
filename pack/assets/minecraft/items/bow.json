@@ -1,4 +1,4 @@
-{
+﻿{
     "oversized_in_gui": true,
     "model": {
         "type": "range_dispatch",
@@ -130,49 +130,6 @@
                     "property": "minecraft:using_item",
                     "on_false": {
                         "type": "minecraft:model",
-                        "model": "item/jungle_bow"
-                    },
-                    "on_true": {
-                        "type": "minecraft:range_dispatch",
-                        "property": "minecraft:use_duration",
-                        "scale": 0.05,
-                        "fallback": {
-                            "type": "minecraft:model",
-                            "model": "item/jungle_bow"
-                        },
-                        "entries": [
-                            {
-                                "threshold": 0.0,
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_bow_pulling_0"
-                                }
-                            },
-                            {
-                                "threshold": 0.65,
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_bow_pulling_1"
-                                }
-                            },
-                            {
-                                "threshold": 0.9,
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_bow_pulling_2"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "threshold": 4,
-                "model": {
-                    "type": "minecraft:condition",
-                    "property": "minecraft:using_item",
-                    "on_false": {
-                        "type": "minecraft:model",
                         "model": "item/spruce_bow"
                     },
                     "on_true": {
@@ -210,7 +167,7 @@
                 }
             },
             {
-                "threshold": 5,
+                "threshold": 4,
                 "model": {
                     "type": "minecraft:condition",
                     "property": "minecraft:using_item",
@@ -246,6 +203,49 @@
                                 "model": {
                                     "type": "minecraft:model",
                                     "model": "item/dark_oak_bow_pulling_2"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 5,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/warped_bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/warped_bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.65,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.9,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_bow_pulling_2"
                                 }
                             }
                         ]

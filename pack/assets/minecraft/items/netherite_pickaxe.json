@@ -23,6 +23,13 @@
                 }
             },
             {
+                "threshold": 1302,
+                "model": {
+                    "type": "model",
+                    "model": "item/wanted_poster"
+                }
+            },
+            {
                 "threshold": 1402,
                 "model": {
                     "type": "model",

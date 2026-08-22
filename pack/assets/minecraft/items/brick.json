@@ -1,4 +1,4 @@
-{
+﻿{
     "oversized_in_gui": true,
     "model": {
         "type": "range_dispatch",
@@ -110,21 +110,21 @@
                 "threshold": 923,
                 "model": {
                     "type": "model",
-                    "model": "item/jungle_wood_log"
+                    "model": "item/spruce_wood_log"
                 }
             },
             {
                 "threshold": 924,
                 "model": {
                     "type": "model",
-                    "model": "item/spruce_wood_log"
+                    "model": "item/dark_oak_wood_log"
                 }
             },
             {
                 "threshold": 925,
                 "model": {
                     "type": "model",
-                    "model": "item/dark_oak_wood_log"
+                    "model": "item/warped_wood_log"
                 }
             },
             {
@@ -404,21 +404,21 @@
                 "threshold": 1023,
                 "model": {
                     "type": "model",
-                    "model": "item/jungle_wood_plank"
+                    "model": "item/spruce_wood_plank"
                 }
             },
             {
                 "threshold": 1024,
                 "model": {
                     "type": "model",
-                    "model": "item/spruce_wood_plank"
+                    "model": "item/dark_oak_wood_plank"
                 }
             },
             {
                 "threshold": 1025,
                 "model": {
                     "type": "model",
-                    "model": "item/dark_oak_wood_plank"
+                    "model": "item/warped_wood_plank"
                 }
             },
             {
@@ -1024,6 +1024,13 @@
                 }
             },
             {
+                "threshold": 1303,
+                "model": {
+                    "type": "model",
+                    "model": "item/distinguished_quartz"
+                }
+            },
+            {
                 "threshold": 1401,
                 "model": {
                     "type": "model",
@@ -1126,6 +1133,48 @@
                 "model": {
                     "type": "model",
                     "model": "item/cartridge_13"
+                }
+            },
+            {
+                "threshold": 2001,
+                "model": {
+                    "type": "model",
+                    "model": "item/stone_shard"
+                }
+            },
+            {
+                "threshold": 2002,
+                "model": {
+                    "type": "model",
+                    "model": "item/granite_shard"
+                }
+            },
+            {
+                "threshold": 2003,
+                "model": {
+                    "type": "model",
+                    "model": "item/diorite_shard"
+                }
+            },
+            {
+                "threshold": 2004,
+                "model": {
+                    "type": "model",
+                    "model": "item/endstone_shard"
+                }
+            },
+            {
+                "threshold": 2005,
+                "model": {
+                    "type": "model",
+                    "model": "item/prismarine_shard"
+                }
+            },
+            {
+                "threshold": 2006,
+                "model": {
+                    "type": "model",
+                    "model": "item/blackstone_shard"
                 }
             }
         ]

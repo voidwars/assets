@@ -1,4 +1,4 @@
-{
+﻿{
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "item/stone_pickaxe",
@@ -134,12 +134,12 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, 90, 0],
-			"translation": [0, 3, 1.4]
+			"rotation": [0, -90, 0],
+			"translation": [0, 3, 1.5]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, 90, 0],
-			"translation": [0, 3, 1.4]
+			"rotation": [0, -90, 0],
+			"translation": [0, 3, 1.5]
 		},
 		"firstperson_righthand": {
 			"rotation": [0, -90, 25],
@@ -167,24 +167,21 @@
 		{
 			"name": "stone_pickaxe",
 			"origin": [8, 8, 8],
+			"scope": 0,
 			"color": 0,
-			"nbt": "{}",
-			"armAnimationEnabled": false,
 			"children": [
 				{
 					"name": "head",
 					"origin": [8, 8.27985, 8],
+					"scope": 0,
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [0, 1, 2, 3, 4, 5, 6]
 				},
 				{
 					"name": "handle",
 					"origin": [8, 8.27985, 8],
+					"scope": 0,
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [7, 8]
 				}
 			]

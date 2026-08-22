@@ -53,6 +53,9 @@ Host ↔ range mapping: [custom-model-data.md](custom-model-data.md).
 | GUI icon | `models/item/gui_<name>.json` | `textures/item/gui_<name>.png` | `paper.json` (1400 band) |
 | Skill icon | `models/item/skill_<name>.json` | `textures/item/skill_<name>.png` | `brick.json` (1201–1255) |
 | Cartridge | `models/item/cartridge_<n>.json` | `textures/item/cartridge_<n>.png` | `brick.json` (1700–1713) |
+| Wand / resonator | `models/item/<tier>_resonator.json` | `textures/item/…` | `blaze_rod.json` (80–85) |
+| Wand shard | `models/item/<stone>_shard.json` | `textures/item/…` | `brick.json` (2001–2006) |
+| Arrow / bolt | `models/item/<name>_arrow.json` / `*_bolt.json` | `textures/item/…` | `arrow.json` (2011–2016 / 2021–2026) |
 | Armor **icon** | `models/item/<tier>_<set>_*.json` | `textures/item/…` | `chainmail_*.json` (1501–1518) |
 | Armor **worn** + trims | (trim atlas, not CMD) | `textures/entity/equipment/…` + `textures/trims/…` | see [armor-and-trims.md](armor-and-trims.md) |
 | ModelEngine mob | `modelengine/models/<id>/` | `modelengine/textures/entity/<id>.png` | server-side ModelEngine config |

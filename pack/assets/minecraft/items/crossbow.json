@@ -1,4 +1,4 @@
-{
+﻿{
     "oversized_in_gui": true,
     "model": {
         "type": "range_dispatch",
@@ -176,61 +176,6 @@
                         "property": "minecraft:charge_type",
                         "fallback": {
                             "type": "minecraft:model",
-                            "model": "item/jungle_crossbow_standby"
-                        },
-                        "cases": [
-                            {
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_crossbow_arrow"
-                                },
-                                "when": "arrow"
-                            },
-                            {
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_crossbow_firework"
-                                },
-                                "when": "rocket"
-                            }
-                        ]
-                    },
-                    "on_true": {
-                        "type": "minecraft:range_dispatch",
-                        "property": "minecraft:crossbow/pull",
-                        "fallback": {
-                            "type": "minecraft:model",
-                            "model": "item/jungle_crossbow_pulling_0"
-                        },
-                        "entries": [
-                            {
-                                "threshold": 0.65,
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_crossbow_pulling_1"
-                                }
-                            },
-                            {
-                                "threshold": 0.9,
-                                "model": {
-                                    "type": "minecraft:model",
-                                    "model": "item/jungle_crossbow_pulling_2"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "threshold": 10,
-                "model": {
-                    "type": "minecraft:condition",
-                    "property": "minecraft:using_item",
-                    "on_false": {
-                        "type": "minecraft:select",
-                        "property": "minecraft:charge_type",
-                        "fallback": {
-                            "type": "minecraft:model",
                             "model": "item/spruce_crossbow_standby"
                         },
                         "cases": [
@@ -277,7 +222,7 @@
                 }
             },
             {
-                "threshold": 11,
+                "threshold": 10,
                 "model": {
                     "type": "minecraft:condition",
                     "property": "minecraft:using_item",
@@ -325,6 +270,61 @@
                                 "model": {
                                     "type": "minecraft:model",
                                     "model": "item/dark_oak_crossbow_pulling_2"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 11,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:select",
+                        "property": "minecraft:charge_type",
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/warped_crossbow_standby"
+                        },
+                        "cases": [
+                            {
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_crossbow_arrow"
+                                },
+                                "when": "arrow"
+                            },
+                            {
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_crossbow_firework"
+                                },
+                                "when": "rocket"
+                            }
+                        ]
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:crossbow/pull",
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/warped_crossbow_pulling_0"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.65,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_crossbow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.9,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/warped_crossbow_pulling_2"
                                 }
                             }
                         ]

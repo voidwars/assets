@@ -1,4 +1,4 @@
-{
+﻿{
     "oversized_in_gui": true,
     "model": {
         "type": "range_dispatch",
@@ -110,21 +110,21 @@
                 "threshold": 823,
                 "model": {
                     "type": "model",
-                    "model": "item/jungle_stump"
+                    "model": "item/spruce_stump"
                 }
             },
             {
                 "threshold": 824,
                 "model": {
                     "type": "model",
-                    "model": "item/spruce_stump"
+                    "model": "item/dark_oak_stump"
                 }
             },
             {
                 "threshold": 825,
                 "model": {
                     "type": "model",
-                    "model": "item/dark_oak_stump"
+                    "model": "item/warped_stump"
                 }
             },
             {
