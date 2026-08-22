@@ -1,28 +1,23 @@
-name: Build resource pack
+name: Promote pack to prod
 
-# Push/merge to main (pack/**) → GitHub release tag "staging"
-# Prod → Actions → Promote pack to prod (tag latest)
-# No per-PR zip. Staging and code previews both use the staging URL.
+# Operators: Actions → Promote pack to prod → confirm = promote
+# Rebuilds pack.zip from main and rewrites the `latest` GitHub release tag.
+# Does not run on merge. See voidwars-k8s docs/DELIVERY.md
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "pack/**"
-      - ".github/workflows/packsquash.yml"
   workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type promote to publish main pack to tag latest (prod)'
+        required: true
+        type: string
 
 permissions:
   contents: write
 
-concurrency:
-  group: assets-pack-staging
-  cancel-in-progress: true
-
 jobs:
-  staging:
-    name: Publish staging pack
+  promote:
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'promote'
     runs-on: ubuntu-latest
     steps:
       - name: Clone main
@@ -40,12 +35,12 @@ jobs:
             output_file_path = '${{ runner.temp }}/pack.zip'
             zip_spec_conformance_level = 'disregard'
 
-      - name: Publish staging release
+      - name: Publish latest (prod)
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: staging
-          prerelease: true
-          title: "Staging — ${{ github.sha }}"
+          automatic_release_tag: latest
+          prerelease: false
+          title: "Production pack — ${{ github.sha }}"
           files: |
             ${{ runner.temp }}/pack.zip
