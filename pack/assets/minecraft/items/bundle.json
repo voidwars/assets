@@ -1,0 +1,125 @@
+{
+    "oversized_in_gui": true,
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/bundle"
+        },
+        "entries": [
+            {
+                "threshold": 2201,
+                "model": {
+                    "type": "model",
+                    "model": "item/white_case"
+                }
+            },
+            {
+                "threshold": 2202,
+                "model": {
+                    "type": "model",
+                    "model": "item/orange_case"
+                }
+            },
+            {
+                "threshold": 2203,
+                "model": {
+                    "type": "model",
+                    "model": "item/magenta_case"
+                }
+            },
+            {
+                "threshold": 2204,
+                "model": {
+                    "type": "model",
+                    "model": "item/light_blue_case"
+                }
+            },
+            {
+                "threshold": 2205,
+                "model": {
+                    "type": "model",
+                    "model": "item/yellow_case"
+                }
+            },
+            {
+                "threshold": 2206,
+                "model": {
+                    "type": "model",
+                    "model": "item/lime_case"
+                }
+            },
+            {
+                "threshold": 2207,
+                "model": {
+                    "type": "model",
+                    "model": "item/pink_case"
+                }
+            },
+            {
+                "threshold": 2208,
+                "model": {
+                    "type": "model",
+                    "model": "item/gray_case"
+                }
+            },
+            {
+                "threshold": 2209,
+                "model": {
+                    "type": "model",
+                    "model": "item/light_gray_case"
+                }
+            },
+            {
+                "threshold": 2210,
+                "model": {
+                    "type": "model",
+                    "model": "item/cyan_case"
+                }
+            },
+            {
+                "threshold": 2211,
+                "model": {
+                    "type": "model",
+                    "model": "item/purple_case"
+                }
+            },
+            {
+                "threshold": 2212,
+                "model": {
+                    "type": "model",
+                    "model": "item/blue_case"
+                }
+            },
+            {
+                "threshold": 2213,
+                "model": {
+                    "type": "model",
+                    "model": "item/brown_case"
+                }
+            },
+            {
+                "threshold": 2214,
+                "model": {
+                    "type": "model",
+                    "model": "item/green_case"
+                }
+            },
+            {
+                "threshold": 2215,
+                "model": {
+                    "type": "model",
+                    "model": "item/red_case"
+                }
+            },
+            {
+                "threshold": 2216,
+                "model": {
+                    "type": "model",
+                    "model": "item/black_case"
+                }
+            }
+        ]
+    }
+}

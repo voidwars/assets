@@ -9,6 +9,153 @@
         },
         "entries": [
             {
+                "threshold": 401,
+                "model": {
+                    "type": "model",
+                    "model": "item/jute_bandage"
+                }
+            },
+            {
+                "threshold": 402,
+                "model": {
+                    "type": "model",
+                    "model": "item/lotus_bandage"
+                }
+            },
+            {
+                "threshold": 403,
+                "model": {
+                    "type": "model",
+                    "model": "item/yucca_bandage"
+                }
+            },
+            {
+                "threshold": 404,
+                "model": {
+                    "type": "model",
+                    "model": "item/flax_bandage"
+                }
+            },
+            {
+                "threshold": 405,
+                "model": {
+                    "type": "model",
+                    "model": "item/hemp_bandage"
+                }
+            },
+            {
+                "threshold": 406,
+                "model": {
+                    "type": "model",
+                    "model": "item/bamboo_bandage"
+                }
+            },
+            {
+                "threshold": 407,
+                "model": {
+                    "type": "model",
+                    "model": "item/birch_splint"
+                }
+            },
+            {
+                "threshold": 408,
+                "model": {
+                    "type": "model",
+                    "model": "item/oak_splint"
+                }
+            },
+            {
+                "threshold": 409,
+                "model": {
+                    "type": "model",
+                    "model": "item/spruce_splint"
+                }
+            },
+            {
+                "threshold": 410,
+                "model": {
+                    "type": "model",
+                    "model": "item/dark_oak_splint"
+                }
+            },
+            {
+                "threshold": 411,
+                "model": {
+                    "type": "model",
+                    "model": "item/warped_splint"
+                }
+            },
+            {
+                "threshold": 412,
+                "model": {
+                    "type": "model",
+                    "model": "item/crimson_splint"
+                }
+            },
+            {
+                "threshold": 413,
+                "model": {
+                    "type": "model",
+                    "model": "item/nightshade_heal_kit"
+                }
+            },
+            {
+                "threshold": 414,
+                "model": {
+                    "type": "model",
+                    "model": "item/cindermoss_heal_kit"
+                }
+            },
+            {
+                "threshold": 415,
+                "model": {
+                    "type": "model",
+                    "model": "item/ironroot_heal_kit"
+                }
+            },
+            {
+                "threshold": 416,
+                "model": {
+                    "type": "model",
+                    "model": "item/goldengrass_heal_kit"
+                }
+            },
+            {
+                "threshold": 417,
+                "model": {
+                    "type": "model",
+                    "model": "item/crystalberry_heal_kit"
+                }
+            },
+            {
+                "threshold": 418,
+                "model": {
+                    "type": "model",
+                    "model": "item/endershroom_heal_kit"
+                }
+            },
+            {
+                "threshold": 425,
+                "model": {
+                    "type": "model",
+                    "model": "item/egg"
+                }
+            },
+            {
+                "threshold": 426,
+                "model": {
+                    "type": "model",
+                    "model": "item/blue_egg"
+                }
+            },
+            {
+                "threshold": 427,
+                "model": {
+                    "type": "model",
+                    "model": "item/brown_egg"
+                }
+            },
+            {
                 "threshold": 901,
                 "model": {
                     "type": "model",
@@ -1024,10 +1171,38 @@
                 }
             },
             {
+                "threshold": 1256,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_spying"
+                }
+            },
+            {
+                "threshold": 1257,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_resonator"
+                }
+            },
+            {
+                "threshold": 1258,
+                "model": {
+                    "type": "model",
+                    "model": "item/skill_shieldbearing"
+                }
+            },
+            {
                 "threshold": 1303,
                 "model": {
                     "type": "model",
                     "model": "item/distinguished_quartz"
+                }
+            },
+            {
+                "threshold": 1304,
+                "model": {
+                    "type": "model",
+                    "model": "item/black_cat_hat"
                 }
             },
             {
@@ -1136,6 +1311,139 @@
                 }
             },
             {
+                "threshold": 1801,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_key"
+                }
+            },
+            {
+                "threshold": 1802,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_key"
+                }
+            },
+            {
+                "threshold": 1803,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_key"
+                }
+            },
+            {
+                "threshold": 1804,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_key"
+                }
+            },
+            {
+                "threshold": 1805,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_key"
+                }
+            },
+            {
+                "threshold": 1806,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_key"
+                }
+            },
+            {
+                "threshold": 1807,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_key_2"
+                }
+            },
+            {
+                "threshold": 1808,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_key_2"
+                }
+            },
+            {
+                "threshold": 1809,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_key_2"
+                }
+            },
+            {
+                "threshold": 1810,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_key_2"
+                }
+            },
+            {
+                "threshold": 1811,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_key_2"
+                }
+            },
+            {
+                "threshold": 1812,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_key_2"
+                }
+            },
+            {
+                "threshold": 1911,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_lock_pick"
+                }
+            },
+            {
+                "threshold": 1912,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_lock_pick"
+                }
+            },
+            {
+                "threshold": 1913,
+                "model": {
+                    "type": "model",
+                    "model": "item/copper_lock_pick"
+                }
+            },
+            {
+                "threshold": 1914,
+                "model": {
+                    "type": "model",
+                    "model": "item/iron_lock_pick"
+                }
+            },
+            {
+                "threshold": 1915,
+                "model": {
+                    "type": "model",
+                    "model": "item/golden_lock_pick"
+                }
+            },
+            {
+                "threshold": 1916,
+                "model": {
+                    "type": "model",
+                    "model": "item/diamond_lock_pick"
+                }
+            },
+            {
+                "threshold": 1917,
+                "model": {
+                    "type": "model",
+                    "model": "item/netherite_lock_pick"
+                }
+            },
+            {
                 "threshold": 2001,
                 "model": {
                     "type": "model",
@@ -1175,6 +1483,125 @@
                 "model": {
                     "type": "model",
                     "model": "item/blackstone_shard"
+                }
+            },
+            {
+                "threshold": 2101,
+                "model": {
+                    "type": "model",
+                    "model": "item/bundle"
+                }
+            },
+            {
+                "threshold": 2102,
+                "model": {
+                    "type": "model",
+                    "model": "item/white_bundle"
+                }
+            },
+            {
+                "threshold": 2103,
+                "model": {
+                    "type": "model",
+                    "model": "item/orange_bundle"
+                }
+            },
+            {
+                "threshold": 2104,
+                "model": {
+                    "type": "model",
+                    "model": "item/magenta_bundle"
+                }
+            },
+            {
+                "threshold": 2105,
+                "model": {
+                    "type": "model",
+                    "model": "item/light_blue_bundle"
+                }
+            },
+            {
+                "threshold": 2106,
+                "model": {
+                    "type": "model",
+                    "model": "item/yellow_bundle"
+                }
+            },
+            {
+                "threshold": 2107,
+                "model": {
+                    "type": "model",
+                    "model": "item/lime_bundle"
+                }
+            },
+            {
+                "threshold": 2108,
+                "model": {
+                    "type": "model",
+                    "model": "item/pink_bundle"
+                }
+            },
+            {
+                "threshold": 2109,
+                "model": {
+                    "type": "model",
+                    "model": "item/gray_bundle"
+                }
+            },
+            {
+                "threshold": 2110,
+                "model": {
+                    "type": "model",
+                    "model": "item/light_gray_bundle"
+                }
+            },
+            {
+                "threshold": 2111,
+                "model": {
+                    "type": "model",
+                    "model": "item/cyan_bundle"
+                }
+            },
+            {
+                "threshold": 2112,
+                "model": {
+                    "type": "model",
+                    "model": "item/purple_bundle"
+                }
+            },
+            {
+                "threshold": 2113,
+                "model": {
+                    "type": "model",
+                    "model": "item/blue_bundle"
+                }
+            },
+            {
+                "threshold": 2114,
+                "model": {
+                    "type": "model",
+                    "model": "item/brown_bundle"
+                }
+            },
+            {
+                "threshold": 2115,
+                "model": {
+                    "type": "model",
+                    "model": "item/green_bundle"
+                }
+            },
+            {
+                "threshold": 2116,
+                "model": {
+                    "type": "model",
+                    "model": "item/red_bundle"
+                }
+            },
+            {
+                "threshold": 2117,
+                "model": {
+                    "type": "model",
+                    "model": "item/black_bundle"
                 }
             }
         ]
