@@ -7,35 +7,6 @@
             "type": "model",
             "model": "item/golden_apple"
         },
-        "entries": [
-            {
-                "threshold": 401,
-                "model": {
-                    "type": "model",
-                    "model": "item/bandage"
-                }
-            },
-            {
-                "threshold": 402,
-                "model": {
-                    "type": "model",
-                    "model": "item/magic_bandage"
-                }
-            },
-            {
-                "threshold": 411,
-                "model": {
-                    "type": "model",
-                    "model": "item/medkit_t1"
-                }
-            },
-            {
-                "threshold": 421,
-                "model": {
-                    "type": "model",
-                    "model": "item/wooden_splint"
-                }
-            }
-        ]
+        "entries": []
     }
 }
