@@ -32,7 +32,8 @@ When adding a new icon, allocate the ID in that enum first, then wire the same t
 | 1501–1518 | Armor tier icons | light / medium / heavy × 6 tiers |
 | 1601–1612 | Contract task heads | blaze, bosses, mob heads |
 | 1700–1713 | Cartridges / secure containers | `cartridge_0` … `cartridge_13` (brick host) |
-| 1801–1812 | Key model library | `KEY_1` … `KEY_12` (tier-1 then tier-2 art blocks) |
+| 1801–1812 | Key model library | `KEY_1` … `KEY_12` (tier-1 then tier-2 material art) |
+| 1813–1824 | Themed mob keys | `BLAZE_KEY` … `ZOMBIE_KEY` (flat mob-themed icons) |
 | 1911–1917 | Lockpicks | beginner through grandmaster |
 | 2001–2006 | Wand shards (ammo) | `stone_shard` … `blackstone_shard` (brick host) |
 | 2011–2016 | Arrows | `flint_arrow` … `netherite_arrow` (arrow host) |
@@ -59,7 +60,7 @@ Each host item JSON centralises CMD dispatch for one vanilla material:
 | `paper.json` | 601–625, 1403–1406 |
 | `item_frame.json` | 701–724 |
 | `raw_iron.json` | 801–866 |
-| `brick.json` | 401–418 health, 425–427 eggs, 901–966, 1001–1066, 1101–1107, 1201–1258, 1303–1304, 1401, 1700–1713, 1801–1812 keys, 1911–1917 lockpicks, 2001–2006, 2101–2117 loot bundles |
+| `brick.json` | 401–418 health, 425–427 eggs, 901–966, 1001–1066, 1101–1107, 1201–1258, 1303–1304, 1401, 1700–1713, 1801–1824 keys, 1911–1917 lockpicks, 2001–2006, 2101–2117 loot bundles |
 | `bundle.json` | 2201–2216 item cases |
 | `chainmail_helmet.json` | 1501–1518 |
 | `chainmail_chestplate.json` | 1501–1518 |

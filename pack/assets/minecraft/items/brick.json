@@ -1395,6 +1395,90 @@
                 }
             },
             {
+                "threshold": 1813,
+                "model": {
+                    "type": "model",
+                    "model": "item/blaze_key"
+                }
+            },
+            {
+                "threshold": 1814,
+                "model": {
+                    "type": "model",
+                    "model": "item/bogged_key"
+                }
+            },
+            {
+                "threshold": 1815,
+                "model": {
+                    "type": "model",
+                    "model": "item/husk_key"
+                }
+            },
+            {
+                "threshold": 1816,
+                "model": {
+                    "type": "model",
+                    "model": "item/magma_cube_key"
+                }
+            },
+            {
+                "threshold": 1817,
+                "model": {
+                    "type": "model",
+                    "model": "item/piglin_key"
+                }
+            },
+            {
+                "threshold": 1818,
+                "model": {
+                    "type": "model",
+                    "model": "item/pillager_key"
+                }
+            },
+            {
+                "threshold": 1819,
+                "model": {
+                    "type": "model",
+                    "model": "item/skeleton_key"
+                }
+            },
+            {
+                "threshold": 1820,
+                "model": {
+                    "type": "model",
+                    "model": "item/stray_key"
+                }
+            },
+            {
+                "threshold": 1821,
+                "model": {
+                    "type": "model",
+                    "model": "item/twins_key"
+                }
+            },
+            {
+                "threshold": 1822,
+                "model": {
+                    "type": "model",
+                    "model": "item/warden_key"
+                }
+            },
+            {
+                "threshold": 1823,
+                "model": {
+                    "type": "model",
+                    "model": "item/wither_skeleton_key"
+                }
+            },
+            {
+                "threshold": 1824,
+                "model": {
+                    "type": "model",
+                    "model": "item/zombie_key"
+                }
+            },
+            {
                 "threshold": 1911,
                 "model": {
                     "type": "model",
