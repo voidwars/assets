@@ -53,7 +53,7 @@ Host ↔ range mapping: [custom-model-data.md](custom-model-data.md).
 | GUI icon | `models/item/gui_<name>.json` | `textures/item/gui_<name>.png` | `paper.json` (1400 band) |
 | Skill icon | `models/item/skill_<name>.json` | `textures/item/skill_<name>.png` | `brick.json` (1201–1258) |
 | Health item | `models/item/<name>.json` | `textures/item/<name>.png` | `brick.json` (401–424, 425–427 eggs) |
-| Key / lockpick / loot bundle | `models/item/<name>.json` | `textures/item/<name>.png` | `brick.json` (1801–1824 / 1911–1917 / 2101–2117) |
+| Key / lockpick / loot bundle | `models/item/<name>.json` | `textures/item/<name>.png` | `brick.json` (1801–1826 / 1911–1917 / 2101–2117) |
 | Item case | `models/item/<color>_case.json` | `textures/item/<color>_case.png` | `bundle.json` (2201–2216) |
 | Cartridge | `models/item/cartridge_<n>.json` | `textures/item/cartridge_<n>.png` | `brick.json` (1700–1713) |
 | Wand / resonator | `models/item/<tier>_resonator.json` | `textures/item/…` | `blaze_rod.json` (161–166) |

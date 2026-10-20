@@ -1479,6 +1479,20 @@
                 }
             },
             {
+                "threshold": 1825,
+                "model": {
+                    "type": "model",
+                    "model": "item/ghast_key"
+                }
+            },
+            {
+                "threshold": 1826,
+                "model": {
+                    "type": "model",
+                    "model": "item/wither_key"
+                }
+            },
+            {
                 "threshold": 1911,
                 "model": {
                     "type": "model",
