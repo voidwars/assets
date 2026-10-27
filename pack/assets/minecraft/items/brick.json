@@ -156,6 +156,48 @@
                 }
             },
             {
+                "threshold": 428,
+                "model": {
+                    "type": "model",
+                    "model": "item/jute_dressing"
+                }
+            },
+            {
+                "threshold": 429,
+                "model": {
+                    "type": "model",
+                    "model": "item/lotus_dressing"
+                }
+            },
+            {
+                "threshold": 430,
+                "model": {
+                    "type": "model",
+                    "model": "item/yucca_dressing"
+                }
+            },
+            {
+                "threshold": 431,
+                "model": {
+                    "type": "model",
+                    "model": "item/flax_dressing"
+                }
+            },
+            {
+                "threshold": 432,
+                "model": {
+                    "type": "model",
+                    "model": "item/hemp_dressing"
+                }
+            },
+            {
+                "threshold": 433,
+                "model": {
+                    "type": "model",
+                    "model": "item/bamboo_dressing"
+                }
+            },
+            {
                 "threshold": 901,
                 "model": {
                     "type": "model",
