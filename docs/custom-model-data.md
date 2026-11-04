@@ -16,7 +16,7 @@ When adding a new icon, allocate the ID in that enum first, then wire the same t
 | 161–166 | Wands / resonators | `flint_resonator` … `netherite_resonator` (blaze_rod host) |
 | 101–166 | Melee weapons | swords, daggers, maces, spears, hammers, battleaxes |
 | 201–266 | Tools | pickaxes, quarry hammers, sickles, lumber axes, secateurs, harpoons, skinning knives |
-| 301–306 | Currency | copper through netherite coins, contract points |
+| 300–306 | Currency | flint through netherite coins, contract points |
 | 401–424 | Health items | bandages T1–T6 (401–406), splints T1–T6, heal kits T1–T6, potions T1–T6 |
 | 425–427 | Eggs | `egg`, `blue_egg`, `brown_egg` (brick host) |
 | 428–433 | Dressings | jute → lotus → yucca → flax → hemp → bamboo (brick host) |
@@ -29,7 +29,7 @@ When adding a new icon, allocate the ID in that enum first, then wire the same t
 | 1101–1107 | Essences | fire, ice, air, earth, lightning, light, dark |
 | 1201–1258 | Skill icons | `skill_*` (includes 1256–1258: spying, wand, shieldbearing) |
 | 1301–1304 | Streamer / misc | `MF_HELMET`, `wanted_poster`, `distinguished_quartz`, `black_cat_hat` |
-| 1401–1406 | UI elements | exploded mine, searching icon, pagination, mailbox, trash |
+| 1401–1410 | UI elements | exploded mine, searching icon, pagination, mailbox, trash, locked maps (palace, woods, valley, chasm) |
 | 1501–1518 | Armor tier icons | light / medium / heavy × 6 tiers |
 | 1601–1612 | Contract task heads | blaze, bosses, mob heads |
 | 1700–1713 | Cartridges / secure containers | `cartridge_0` … `cartridge_13` (brick host) |
@@ -56,9 +56,9 @@ Each host item JSON centralises CMD dispatch for one vanilla material:
 | `crossbow.json` | 7–12 (with charge/firework composites) |
 | `arrow.json` | 2011–2016 arrows, 2021–2026 bolts |
 | `trident.json` | 113–118 (tiered spears — legacy tier display) |
-| `gold_nugget.json` | 301–306 |
+| `gold_nugget.json` | 300–306 |
 | `name_tag.json` | 501–510 |
-| `paper.json` | 601–625, 1403–1406 |
+| `paper.json` | 601–625, 1403–1410 |
 | `item_frame.json` | 701–724 |
 | `raw_iron.json` | 801–866 |
 | `brick.json` | 401–418 health, 425–427 eggs, 428–433 dressings, 901–966, 1001–1066, 1101–1107, 1201–1258, 1303–1304, 1401, 1700–1713, 1801–1826 keys, 1911–1917 lockpicks, 2001–2006, 2101–2117 loot bundles |
