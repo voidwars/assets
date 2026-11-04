@@ -9,6 +9,13 @@
         },
         "entries": [
             {
+                "threshold": 300,
+                "model": {
+                    "type": "model",
+                    "model": "item/flint_coin"
+                }
+            },
+            {
                 "threshold": 301,
                 "model": {
                     "type": "model",

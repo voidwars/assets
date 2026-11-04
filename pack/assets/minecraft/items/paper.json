@@ -203,6 +203,34 @@
                     "type": "model",
                     "model": "item/gui_trash"
                 }
+            },
+            {
+                "threshold": 1407,
+                "model": {
+                    "type": "model",
+                    "model": "item/palace_locked"
+                }
+            },
+            {
+                "threshold": 1408,
+                "model": {
+                    "type": "model",
+                    "model": "item/woods_locked"
+                }
+            },
+            {
+                "threshold": 1409,
+                "model": {
+                    "type": "model",
+                    "model": "item/valley_locked"
+                }
+            },
+            {
+                "threshold": 1410,
+                "model": {
+                    "type": "model",
+                    "model": "item/chasm_locked"
+                }
             }
         ]
     }
