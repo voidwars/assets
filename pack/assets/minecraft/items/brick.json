@@ -1248,6 +1248,48 @@
                 }
             },
             {
+                "threshold": 1305,
+                "model": {
+                    "type": "model",
+                    "model": "item/crown"
+                }
+            },
+            {
+                "threshold": 1306,
+                "model": {
+                    "type": "model",
+                    "model": "item/headphones"
+                }
+            },
+            {
+                "threshold": 1307,
+                "model": {
+                    "type": "model",
+                    "model": "item/helmet"
+                }
+            },
+            {
+                "threshold": 1308,
+                "model": {
+                    "type": "model",
+                    "model": "item/gauntlet"
+                }
+            },
+            {
+                "threshold": 1309,
+                "model": {
+                    "type": "model",
+                    "model": "item/cinderhulk_dagger"
+                }
+            },
+            {
+                "threshold": 1310,
+                "model": {
+                    "type": "model",
+                    "model": "item/ranch_dressing"
+                }
+            },
+            {
                 "threshold": 1401,
                 "model": {
                     "type": "model",
