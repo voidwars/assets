@@ -28,7 +28,7 @@ When adding a new icon, allocate the ID in that enum first, then wire the same t
 | 1001–1066 | Processed gatherables | ingots, cloth, leather, bricks, blends, scales |
 | 1101–1107 | Essences | fire, ice, air, earth, lightning, light, dark |
 | 1201–1258 | Skill icons | `skill_*` (includes 1256–1258: spying, wand, shieldbearing) |
-| 1301–1304 | Streamer / misc | `MF_HELMET`, `wanted_poster`, `distinguished_quartz`, `black_cat_hat` |
+| 1301–1310 | Streamer / misc | `MF_HELMET`, `wanted_poster`, `distinguished_quartz`, `black_cat_hat`, `crown`, `headphones`, `helmet`, `gauntlet`, `cinderhulk_dagger`, `ranch_dressing` |
 | 1401–1410 | UI elements | exploded mine, searching icon, pagination, mailbox, trash, locked maps (palace, woods, valley, chasm) |
 | 1501–1518 | Armor tier icons | light / medium / heavy × 6 tiers |
 | 1601–1612 | Contract task heads | blaze, bosses, mob heads |
@@ -61,7 +61,7 @@ Each host item JSON centralises CMD dispatch for one vanilla material:
 | `paper.json` | 601–625, 1403–1410 |
 | `item_frame.json` | 701–724 |
 | `raw_iron.json` | 801–866 |
-| `brick.json` | 401–418 health, 425–427 eggs, 428–433 dressings, 901–966, 1001–1066, 1101–1107, 1201–1258, 1303–1304, 1401, 1700–1713, 1801–1826 keys, 1911–1917 lockpicks, 2001–2006, 2101–2117 loot bundles |
+| `brick.json` | 401–418 health, 425–427 eggs, 428–433 dressings, 901–966, 1001–1066, 1101–1107, 1201–1258, 1303–1310, 1401, 1700–1713, 1801–1826 keys, 1911–1917 lockpicks, 2001–2006, 2101–2117 loot bundles |
 | `bundle.json` | 2201–2216 item cases |
 | `chainmail_helmet.json` | 1501–1518 |
 | `chainmail_chestplate.json` | 1501–1518 |
