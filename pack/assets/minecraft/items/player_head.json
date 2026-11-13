@@ -7,8 +7,7 @@
             "type": "minecraft:special",
             "base": "minecraft:item/template_skull",
             "model": {
-                "type": "minecraft:head",
-                "kind": "player"
+                "type": "minecraft:player_head"
             }
         },
         "entries": [
@@ -18,8 +17,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/head",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -29,8 +27,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/right_arm",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -40,8 +37,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/left_arm",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -51,8 +47,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/torso",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -62,8 +57,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/right_leg",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -73,8 +67,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/left_leg",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -84,8 +77,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/slim_right",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             },
@@ -95,8 +87,7 @@
                     "type": "minecraft:special",
                     "base": "minecraft:item/custom/entities/player/slim_left",
                     "model": {
-                        "type": "minecraft:head",
-                        "kind": "player"
+                        "type": "minecraft:player_head"
                     }
                 }
             }
